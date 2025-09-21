@@ -1,0 +1,145 @@
+:root
+{
+    --font-color:#ffffff;
+    --background-color: #f0dac5;
+    --botton-background: #1c2340;
+    --container-background-color: #50223c;
+    
+}
+html
+{
+    background-color: var(--background-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--font-color);
+    scroll-behavior: smooth;
+}
+body
+{
+    margin: 0px;
+}
+p
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    
+}
+.text-justify
+{
+    text-align: justify;
+}
+.grid-container
+{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 100%;
+    min-width: 250px;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+.grid-item
+{
+    background-color: var(--container-background-color);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    box-shadow: 0.4rem 0.4rem 0.7rem black;
+}
+.column-span-2
+{
+    grid-column: span 2;
+}
+.flex
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.direction-coloumn
+{
+    flex-direction: column
+}
+a
+{
+    color: var(--font-color);
+}
+.task-container
+{
+    border: 1px solid rgb(245, 245, 245);
+    padding: 0.5em;
+    margin: 0.2em;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+.over-flow-y
+{
+    height: 100px;
+    overflow-y: auto;
+}
+.height-100px
+{
+    height: 100px;
+}
+.height-250px
+{
+    height: 250px;
+}
+.col-5
+{
+    box-sizing: border-box;
+    padding: 0.1rem;
+    min-width: 19%;
+}
+.btn
+{
+    color: var(--background-color);
+    background-color: var(--botton-background);
+    padding: 0.5em;
+    border-radius: 0.5rem;
+}
+.btn:hover
+{
+    background-color: rgb(74, 31, 31);
+}
+.reset
+{
+    background-color: rgb(114, 36, 36);
+}
+.inline
+{
+    display: inline;
+}
+input
+{
+    padding: 0.5em;
+    border-color: azure;
+    background-color: antiquewhite;
+    border-radius: 0.5rem;
+    margin: 0.1rem;
+    color: rgb(5, 51, 51);
+}
+input[type = number]::-webkit-outer-spin-button, input[type = number]::-webkit-inner-spin-button
+{
+    appearance: none;
+}
+select
+{
+    border: solid 1px rgb(206, 206, 206);
+    box-sizing: border-box;
+}
+@media only screen and (max-width: 700px)
+{
+    .grid-container
+    {
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    .column-span-2
+{
+    grid-column: span 1;
+}
+}

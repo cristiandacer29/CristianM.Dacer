@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item column-span-2">
+            <h2>12 JavaScript Code Challenges for Beginners</h2>
+            <a href="https://www.codecademy.com/resources/blog/10-javascript-code-challenges-for-beginners/" target="_blank"><h3>www.codecademy.com</h3></a>
+        </div>
+        <div class="grid-item column-span-2">
+            <div class="flex direction-coloumn">
+                <p class="text-justify">
+                    1. Print all even numbers from 0 – 10<br><br>
+                    Try to make the solution to this problem as efficiently as possible. Consider using loops that would allow 
+                    you to type the fewest characters/commands. 
+                    While you could simply print the even numbers, get creative and see how you 
+                    could output them in a way that would work up to 10 or even up to 10,000 with little extra effort.
+                </p>
+                <div name="task1" class="task-container">
+                        <h3>Find even numbers</h3>
+                        <input type="number" name="input" placeholder="0">
+                        <input type="submit" placeholder="Submit" onclick="task1()" class="btn">
+                        <button type="reset" onclick="reset()" class="btn reset">Reset</button>
+                    
+                    <p name="task" class="over-flow-y height-100px">Even number = </p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item column-span-2">
+            <div class="flex direction-coloumn" id="task2MainContainer">
+                <p class="text-justify">
+                    2. Print a table containing multiplication tables<br><br>
+                    Let’s start with the tables that many of us had to memorize in school. Can you print a table that
+                    contains all the answers to the multiplication tables from 1 through 10?<br><br>
+
+                    Like Challenge #1, can you create an efficient solution that you could easily
+                    expand should you need the 12 times table?
+                </p>
+                <div id="task2" class="flex task-container over-flow-y height-250px">
+                </div>
+
+            </div>
+        </div>
+        <div class="grid-item direction-coloumn">
+            <p class="text-justify">
+                3. Create a length converter function<br><br>
+                Creating a function is a skill that’ll be useful in many settings, and as you progress, you’ll be
+                working on much more complicated functions than this one. But a function that converts units of 
+                measure can be pretty handy in multiple professions and industries.<br><br>
+
+                Let’s start with a conversion from kilometers to miles. The function should include the input 
+                in kilometers and return the answer in miles.
+            </p>
+            <div class="task-container">
+                <h3>Length converter</h3>
+                <input type="number" id="toConvert" placeholder="0">
+                <select name="listOfLength" id="length" class="btn">
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="inch">inch</option>
+                    <option value="ft">ft</option>
+                    <option value="m">m</option>
+                    <option value="yard">yard</option>
+                    <option value="km">km</option>
+                    <option value="mile">mile</option>
+                </select>
+                <h3 style="display: inline;">=></h3>
+                <select name="convertListOfLength" id="convertLength" class="btn">
+                    <option value="mm">mm</option>
+                    <option value="cm">cm</option>
+                    <option value="inch">inch</option>
+                    <option value="ft">ft</option>
+                    <option value="m">m</option>
+                    <option value="yard">yard</option>
+                    <option value="km">km</option>
+                    <option value="mile">mile</option>
+                </select>
+                <p id="converted">= </p>
+                <input type="submit" value="Convert" onclick="task3()" class="btn">
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                4. Calculate the sum of numbers within an array<br><br>
+                You can create your own array of numbers but consider trying this problem with a few different sets to verify your solution. Have one array with negative and positive numbers and another with integers and decimals.<br><br>
+                You could also try using arrays of different lengths. If you’re feeling comfortable with this, try the slightly more challenging bonus challenge below.<br><br>
+                Bonus intermediate challenge: Create a function that can return the sum of a particular column or row number in a table.
+            </p>
+            
+            <div class="task-container">
+                <p>
+                    Enter an array<br>
+                </p>
+                <input type="number" name="" id="number1" placeholder="0"><br>
+                <input type="number" name="" id="number2" placeholder="0"><br>
+                <input type="number" name="" id="number3" placeholder="0"><br>
+                <input type="number" name="" id="number4" placeholder="0"><br>
+                <input type="number" name="" id="number5" placeholder="0"><br>
+                <input type="submit" placeholder="Submit" onclick="task4()" class="btn">
+                <p id="task4">Total = </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                5. Create a function that reverses an array<br><br>
+                This challenge is particularly helpful if you’re planning to become a Data Scientist. Manipulating data is a significant part of the role, and building the foundations now will help you later down the road when you’re working with large databases.<br><br>
+                Start small here and work your way up. Begin with an array of 5 numbers, and then try your program with a larger array to verify its success.
+            </p>
+            <div class="task-container">
+                <p id="toReverse"></p>
+                <p id="reversed"></p>
+            </div>
+        </div>
+        <div class="grid-item flex">
+            <p class="text-justify">
+                6. Sort an array from lowest to highest<br><br>
+                You could create a function for this solution as well, but be sure to try your program with varying lengths and types of arrays. Try one with all integers, another with negative numbers, and another with decimals.
+            </p>
+            <div class="task-container">
+                <p>Bobble Sort</p>
+                <p id="randArrayForBobble"></p>
+                <p id="bobbleSort"></p>
+            </div>
+            <div class="task-container">
+                <p>Selection sort</p>
+                <p id="randArrayForSelection"></p>
+                <p id="selectionSort"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                7. Create a function that filters out negative numbers<br><br>
+                In this challenge, you’ll have a function that takes an array as an input and returns an array. But if all goes according to plan, it’ll remove the negative numbers. This is another example of a task that’ll be useful when combing through data and looking for clever ways to eliminate “bad data.”
+            </p>
+            <div class="task-container">
+                <p id="withNegative"></p>
+                <p id="removeNegative"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                8. Remove the spaces found in a string<br><br>
+                Yet another way to clean up data is to remove any errors or unnecessary spaces. This function will take in a string and then return it with all spaces removed. Think about if you were tasked with cleaning up customer data at your job. You could scale this function to clean up specific fields of data, such as zip codes.
+            </p>
+            <div class="task-container">
+                <input type="text" name="" id="textWithSpace" onchange="removeSpace()">
+                <br>
+                <p id="textWithoutSpace"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                9. Return a Boolean if a number is divisible by 10<br><br>
+                Here, you’ll create a function that’ll give you a “true” or “false” Boolean as its output. The inputted number should only return a “true” if it’s divisible by 10. Otherwise, your program should return a “false” answer.
+            </p>
+            <div class="task-container">
+                <input type="number" name="" id="theNumber" onchange="isBoolean()">
+                <br>
+                <p id="isBooleanAnswer"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                10. Return the number of vowels in a string<br><br>
+                Create a function that’ll return an integer of the number of vowels found in a string. This is a great way to practice determining the features of a dataset. If you use JavaScript later in your career, you’ll be well-prepared to determine what datasets (or just strings) consist of. If you feel like an extra challenge, consider returning the number of characters.
+            </p>
+            <div class="task-container">
+                <input type="text" name="" id="stringVowel" onchange="countVowel()">
+                <br>
+                <p id="numberOfVolews"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                11. Create a function that finds the maximum number in an array
+                In this challenge, you’ll write a function that takes an array of numbers as an input and returns the largest number in that array. Test your function with various arrays, including arrays with negative numbers, decimals, and all positive integers.
+            </p>
+            <div class="task-container">
+                <p id="arrayToFind"></p>
+                <p id="higherNmber"></p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <p class="text-justify">
+                12. Check if a string is a palindrome<br><br>
+                A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward (like the words “kayak,” “mom,” “radar,” and “refer”). Create a function that takes a string as input and returns a Boolean indicating whether the string is a palindrome. Test your function with different strings to ensure it works correctly.
+            </p>
+            <div class="task-container">
+                <input type="text" name="" id="stringPalindrome" onchange="isPalindrome()">
+                <br>
+                <p id="palindromeAnswer"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- ============================================================================== -->
+
+<script type="text/javascript">
+    var initialNumber = 0;
+    var task = document.getElementsByName("task");
+    
+    // task 1
+    function task1()
+    {
+        var input = document.getElementsByName("input")[0].value;
+        if (input > 50000)
+        {
+            alert("Max of 50,000 only");
+            input ="";
+            initialNumber = "";
+        }
+        if (input == "")
+        {
+            alert("You must enter a number");
+            input = "";
+            initialNumber = "";
+        }
+        for (initialNumber; initialNumber <= input; initialNumber++)
+        {
+            if (initialNumber % 2  == 0) {
+                task[0].innerHTML += initialNumber+" ";      
+            }
+            
+        }
+        document.getElementsByName("input")[0].value = "";
+    }
+    function reset()
+    {
+        document.getElementsByName("input")[0].value = "";
+        task[0].innerHTML = "Even number = 0";
+    }
+//==============================================================================
+
+    // task 2
+
+    var maxNumber = 10;
+
+    var totalNumber = 0;
+    const mainContainer = document.getElementById("task2");
+    for (totalNumber; totalNumber <= maxNumber; totalNumber++)
+    {
+        var multifly = 0;
+        var newDiv = document.createElement("div");
+        newDiv.setAttribute("id", "task2Container");
+        newDiv.setAttribute("class", "task-container col-5");
+        mainContainer.appendChild(newDiv);
+
+        var newP = document.createElement("p");
+        newP.setAttribute("name", "task22");
+        newDiv.appendChild(newP);
+        var store = document.getElementsByName("task22")[totalNumber];
+        for (multifly; multifly <= maxNumber; multifly++)
+        {
+            store.innerHTML += totalNumber +" x "+ multifly +" = "+ totalNumber * multifly + " <br />";
+        }
+        // task[1].innerHTML += "</td>";
+    }
+//==============================================================================
+
+    // task 3
+    function task3()
+    {
+        const numberToConvert = document.getElementById("toConvert");
+        const length = document.getElementById("length");
+        const convertLength = document.getElementById("convertLength");
+        const converted = document.getElementById("converted");
+        let converMultifly = 0;
+
+        if (numberToConvert.value == "")
+        {
+            alert("You must enter a number");
+            converted.innerHTML = "";
+        }
+        if (converted.innerHTML !== "= ")
+        {
+            converted.innerHTML = "";
+        }
+
+        if (length.value == 'mm')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 1; break;
+                case 'cm': converMultifly = 0.1; break;
+                case 'inch': converMultifly = 0.0393701; break;
+                case 'ft': converMultifly = 0.00328084; break;
+                case 'm': converMultifly = 0.001; break;
+                case 'yard': converMultifly = 0.00109361; break;
+                case 'km': converMultifly = 0.000001; break;
+                case 'mile': converMultifly = 0.0000006214; break;
+            }
+        }
+        else if(length.value == 'cm')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 10; break;
+                case 'cm': converMultifly = 1; break;
+                case 'inch': converMultifly = 0.0393701; break;
+                case 'ft': converMultifly = 0.0328084; break;
+                case 'm': converMultifly = 0.01; break;
+                case 'yard': converMultifly = 0.010936133; break;
+                case 'km': converMultifly = 0.00001; break;
+                case 'mile': converMultifly = 0.0000062137; break;
+            }
+        }
+        else if(length.value == 'inch')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 25.4; break;
+                case 'cm': converMultifly = 2.54; break;
+                case 'inch': converMultifly = 1; break;
+                case 'ft': converMultifly = 0.083333; break;
+                case 'm': converMultifly = 0.0254; break;
+                case 'yard': converMultifly = 0.0277777778; break;
+                case 'km': converMultifly = 0.0000254; break;
+                case 'mile': converMultifly = 0.0000157828; break;
+            }
+        }
+        else if(length.value == 'ft')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 304.8; break;
+                case 'cm': converMultifly = 30.48; break;
+                case 'inch': converMultifly = 12; break;
+                case 'ft': converMultifly = 1; break;
+                case 'm': converMultifly = 0.3048; break;
+                case 'yard': converMultifly = 0.333333333; break;
+                case 'km': converMultifly = 0.0003048; break;
+                case 'mile': converMultifly = 0.0001893939; break;
+            }
+        }
+        else if(length.value == 'm')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 1000; break;
+                case 'cm': converMultifly = 100; break;
+                case 'inch': converMultifly = 39.3701; break;
+                case 'ft': converMultifly = 3.28084; break;
+                case 'm': converMultifly = 1; break;
+                case 'yard': converMultifly = 1.0936132983; break;
+                case 'km': converMultifly = 0.001; break;
+                case 'mile': converMultifly = 0.0006213712; break;
+            }
+        }
+        else if(length.value == 'yard')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 914.4; break;
+                case 'cm': converMultifly = 91.44; break;
+                case 'inch': converMultifly = 36; break;
+                case 'ft': converMultifly = 3; break;
+                case 'm': converMultifly = 0.9144; break;
+                case 'yard': converMultifly = 1; break;
+                case 'km': converMultifly = 0.0009144; break;
+                case 'mile': converMultifly = 0.0005681818; break;
+            }
+        }
+        else if(length.value == 'km')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 1000000; break;
+                case 'cm': converMultifly = 100000; break;
+                case 'inch': converMultifly = 39370.1; break;
+                case 'ft': converMultifly = 3280.84; break;
+                case 'm': converMultifly = 1000; break;
+                case 'yard': converMultifly = 1093.6132983377; break;
+                case 'km': converMultifly = 1; break;
+                case 'mile': converMultifly = 0.6213711922; break;
+            }
+        }
+        else if(length.value == 'mile')
+        {
+            switch (convertLength.value)
+            {
+                case 'mm': converMultifly = 1609344; break;
+                case 'cm': converMultifly = 160934.4; break;
+                case 'inch': converMultifly = 63360; break;
+                case 'ft': converMultifly = 5280; break;
+                case 'm': converMultifly = 1609.344; break;
+                case 'yard': converMultifly = 1760; break;
+                case 'km': converMultifly = 1.609344; break;
+                case 'mile': converMultifly = 1; break;
+            }
+        }
+
+        converted.innerHTML += numberToConvert.value * converMultifly + " " +convertLength.value;
+        numberToConvert.value = "";
+
+    }
+
+//==============================================================================
+     // task 4
+    function task4()
+    {
+        const task4 = document.getElementById("task4"); 
+
+        var number1 = document.getElementById("number1").value; 
+        var number2 = document.getElementById("number2").value; 
+        var number3 = document.getElementById("number3").value; 
+        var number4 = document.getElementById("number4").value; 
+        var number5 = document.getElementById("number5").value; 
+
+        var array = [number1, number2, number3, number4, number5];
+        var initialNumber4 = 0;
+        var sum = 0;
+        for (initialNumber4; initialNumber4 < array.length; initialNumber4++) {
+            sum += Number(array[initialNumber4]);
+        }
+        task4.innerHTML += sum;
+    }
+//==============================================================================
+
+    // task 5
+    var toReverse = [1, 0.52, -3, 4, 554, 776];
+    var reversedFunction = (toReverse)=>
+    {
+        var reversed = [];
+        var arrayLength = toReverse.length-1;
+        var initial5 = 0;
+        for (arrayLength; arrayLength >= initial5; arrayLength--) 
+        {   
+            reversed.push(toReverse[arrayLength]);
+        }
+        return reversed;
+    }
+    console.log("to Reverse " + toReverse);
+    console.log("Reversed " + reversedFunction(toReverse));
+    document.getElementById("toReverse").innerHTML = "To reverse " + toReverse;
+    document.getElementById("reversed").innerHTML = "Reversed " + reversedFunction(toReverse);
+    
+//==============================================================================
+    
+     // task 6 bobble sort
+    var randArray = [1, 99, -6, 55, 0.3, 2];
+    document.getElementById("randArrayForBobble").innerHTML = "Random array " + randArray;
+    function toSortArray(randArray)
+    {
+        var initial6 = 0;
+        for (initial6; initial6 < randArray.length; initial6++)
+        {
+            var initial6Add1 = initial6 + 1;
+            for (initial6Add1; initial6Add1 < randArray.length; initial6Add1++)
+            {
+                if (randArray[initial6] > randArray[initial6Add1])
+                {
+                    var temporary = randArray[initial6];
+                    randArray[initial6] = randArray[initial6Add1];
+                    randArray[initial6Add1] = temporary;
+                }     
+            }
+            
+        }
+        return randArray;
+    }
+    console.log("bobble sort "+ toSortArray(randArray));
+    document.getElementById("bobbleSort").innerHTML = "Sorted array " + toSortArray(randArray);
+//==============================================================================   
+
+    // task 6 selection sort
+    var selectRandArray = [6, 22, 65, -2, 44, 0.55];
+    document.getElementById("randArrayForSelection").innerHTML = "Random array " + selectRandArray;
+    var selection = (selectRandArray)=>
+    {
+        var selectInitial = 0;
+        for (selectInitial; selectInitial < selectRandArray.length; selectInitial++) {
+            var min = selectInitial;
+            var nextSelectInitial = selectInitial + 1;
+            for (nextSelectInitial; nextSelectInitial < selectRandArray.length; nextSelectInitial++) {
+                if (selectRandArray[min] > selectRandArray[nextSelectInitial])
+                {
+                    min = nextSelectInitial;
+                }  
+            }
+            if (min !== selectInitial)
+            {
+                [ selectRandArray[min], selectRandArray[selectInitial] ] = [ selectRandArray[selectInitial], selectRandArray[min] ];
+            }
+            
+        }
+        return selectRandArray;
+    }
+    console.log("selection    sort "+ selection(selectRandArray));
+    document.getElementById("selectionSort").innerHTML = "Sorted array " + selection(selectRandArray);
+//==============================================================================   
+
+    // task 6 insertion sort
+
+//==============================================================================   
+
+    // task 7
+    var withNegative = [1, -3, 7, -33, 0.33];
+    document.getElementById("withNegative").innerHTML = "Array with negative number " + withNegative;
+    var removeNegative = (withNegativeArray)=>
+        {
+            var newArray = [];
+            var negativeInitial = 0;
+            for (negativeInitial; negativeInitial < withNegativeArray.length; negativeInitial++)
+            {
+                if (withNegativeArray[negativeInitial] >= 0 )
+                {  
+                    newArray.push(withNegativeArray[negativeInitial]);
+                }
+            }
+            return newArray;
+        }
+    console.log("without negative " + removeNegative(withNegative));
+    document.getElementById("removeNegative").innerHTML = "Array without negative number " + removeNegative(withNegative);
+
+//==============================================================================   
+
+    // task 8
+    function removeSpace()
+    {
+        var textString = document.getElementById("textWithSpace").value;
+        var removeSpace = (text)=>
+        {
+            text = text.replace(/ /g, "");
+            return text
+        }
+        console.log(removeSpace(textString));
+        document.getElementById("textWithoutSpace").innerHTML = "String - " + removeSpace(textString);
+    } 
+
+//==============================================================================   
+
+    // task 9
+    function isBoolean()
+    {
+    var toKnow = document.getElementById("theNumber").value;
+    var isDivisible = (number)=>
+    {
+        var lastDigit = number % 10;
+        if (lastDigit == 0)
+        {
+            return true;
+        }
+        return false;
+    }
+    console.log(isDivisible(toKnow));
+    document.getElementById("isBooleanAnswer").innerHTML = isDivisible(toKnow);
+    }
+
+//==============================================================================   
+
+    // task 10
+    function countVowel()
+    {
+        var removeSpace10 = (text)=>
+        {
+            text = text.replace(/ /g, "");
+            return text
+        }
+        var string = document.getElementById("stringVowel").value;
+        var toArray = removeSpace10(string).toLowerCase().split("");
+        var vowels = ['a','e','i','o','u'];
+        // var toArray = lowerNoSpace.split("");
+        var arrayInitial = 0;
+        var vowelCount = 0;
+        // for (arrayInitial; arrayInitial < lowerNoSpace.length; arrayInitial++)
+        // {
+        //     toArray.push(lowerNoSpace.slice(arrayInitial, arrayInitial+1));
+        // }
+        var arrayInitial2 = 0;
+        for (arrayInitial2; arrayInitial2 < toArray.length; arrayInitial2++)
+        {
+            var arrayvawel = 0;
+            for (arrayvawel; arrayvawel < vowels.length; arrayvawel++) {
+                if (toArray[arrayInitial2] == vowels[arrayvawel])
+                {
+                    vowelCount++;
+                }
+                
+            }
+        }
+        console.log("Total vowels " + vowelCount);
+        document.getElementById("numberOfVolews").innerHTML = "Total vowels " + vowelCount+ ", Total character you type: "+ removeSpace10(string).length;
+    }
+
+//==============================================================================   
+
+    // task 11
+    var numberArray = [1, -3, 6,-33 ,4.4 , 6];
+    document.getElementById("arrayToFind").innerHTML = "List in array: " + numberArray;
+    var highNumber = (numberArray)=>
+    {
+        var numberArrayInitial = 0;
+        var higherValue = 0;
+        for (numberArrayInitial; numberArrayInitial < numberArray.length; numberArrayInitial++)
+        {
+            numberArray[numberArrayInitial];
+            var toCompareInitial = 0;
+            for (toCompareInitial; toCompareInitial < numberArray.length; toCompareInitial++) {
+                if (numberArray[numberArrayInitial] < numberArray[toCompareInitial])
+                {
+                    higherValue = numberArray[toCompareInitial];
+                }
+            }
+            
+        }
+        return higherValue;
+    }
+
+    console.log("higher Value " + highNumber(numberArray));
+    document.getElementById("higherNmber").innerHTML = "The Higher number is: " + highNumber(numberArray);
+
+//==============================================================================   
+
+    // task 12
+    function isPalindrome()
+    {
+        var palindrome = document.getElementById("stringPalindrome").value;
+        var isPalindrome = (palindrome)=>
+        {   var smallTextPalindrome = palindrome.toLowerCase();
+            var reverseString = smallTextPalindrome.split("").reverse().join("");
+            if (smallTextPalindrome == reverseString)
+            {
+                return true;
+            }
+            return false;
+        }
+        console.log("is Palindrome " + isPalindrome(palindrome));
+        document.getElementById("palindromeAnswer").innerHTML = "The input is palindrome? " + isPalindrome(palindrome);
+    }
+    
+</script>

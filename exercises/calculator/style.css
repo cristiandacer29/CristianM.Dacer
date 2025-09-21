@@ -1,0 +1,107 @@
+:root
+{
+    --text-color:rgb(239, 236, 255);
+    --highlight-color: rgba(255, 255, 255, 0.66);
+    --background-color: rgb(134, 123, 235);
+    --shadow-color: rgba(0, 0, 0, 0.496);
+}
+body
+{
+    background: linear-gradient(80deg, rgb(231, 228, 255), var(--background-color));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+div
+{
+    width: 10%;
+    margin: auto;
+    border: 6px solid var(--background-color);
+    box-shadow: 8px 5px 8px var(--shadow-color), -3px -2px 7px var(--highlight-color), inset 4px 3px 5px var(--shadow-color);
+    border-radius: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+    font-family:Arial, Helvetica, sans-serif;
+    gap: 0.3rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    user-select: none;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-shadow: 4px 2px 3px var(--shadow-color);
+}
+input
+{
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    overflow:visible;
+    border: 3px solid var(--background-color);
+    box-shadow: 4px 2px 5px var(--shadow-color), -1px -1px 3px var(--highlight-color), inset 1px 1px 4px var(--shadow-color);
+    text-shadow: 4px 2px 3px var(--shadow-color);
+    font-family:Arial, Helvetica, sans-serif;
+}
+button
+{
+    box-sizing: border-box;
+    color: var(--text-color);
+    margin: 0.2rem;
+    padding: 2px;
+    width: 27%;
+    font-size: 2rem;
+    user-select: none;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--background-color);
+    box-shadow: 3px 3px 4px var(--shadow-color), -1px -1px 3px var(--highlight-color), inset 1px 1px 3px var(--shadow-color);
+    text-shadow: 4px 2px 3px var(--shadow-color);
+    font-family:Arial, Helvetica, sans-serif;
+}
+button:hover
+{
+    background-color: rgb(165, 155, 251);
+}
+button:active
+{
+    transform: scale(0.9);
+}
+button:focus
+{
+    outline: 0px;
+    background-color: rgb(165, 155, 251);
+}
+
+@media screen and (max-width: 2000px)
+{
+    div
+    {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 1069px)
+{
+    div
+    {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 660px)
+{
+    div
+    {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 440px)
+{
+    div
+    {
+        width: 320px;
+    }
+}

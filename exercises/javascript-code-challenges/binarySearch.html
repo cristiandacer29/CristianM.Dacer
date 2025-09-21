@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm</title>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(219, 190, 140);
+        }
+    </style>
+</head>
+<body>
+    <h1>Algorithm</h1>
+    <hr>
+    <h2>1. Sorting algorithm</h2>
+    <h3>Quicksort</h3>
+    <h3>Mergesort</h3>
+    
+    <hr>
+
+    <h2>2. Search algorithms</h2>
+    <h3>Linear Search</h3>
+    <p id="array">List of array </p>
+    <input type="number" name="" id="linearSearchData">
+    <button type="button"  onclick="linearSearch()">Submit</button>
+    <p id="linearResult"></p>
+
+    <h3>Binary Search</h3>
+    <p id="array1">List of array </p>
+    <input type="number" name="" id="binarySearchData">
+    <button type="button"  onclick="binarySearch()">Submit</button>
+    <p id="binaryResult"></p>
+
+    <hr>
+</body>
+</html>
+
+<script>
+    var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    document.getElementById("array").innerHTML += array;
+    document.getElementById("array1").innerHTML += array;
+
+    //==============================================================
+    //linear search
+    function linearSearch()
+    {
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var find = document.getElementById("linearSearchData").value;
+        var search = (find, array)=>
+        {
+            var index = 0;
+            for (index; index < array.length; index++)
+            {
+                if (array[index] == find)
+                {
+                    return index;
+                } 
+            }
+            return -1;
+        }
+        var result = search(find, array);
+        if (result !== -1)
+        {
+            document.getElementById("linearResult").innerHTML = "Your data is in the index of " + result;
+        }
+        else
+        {
+            document.getElementById("linearResult").innerHTML = "Your data is NOT in the array";
+        }
+        if (find == "" || find == null)
+        {
+            alert("You must enter a number");
+            document.getElementById("linearResult").innerHTML = "";
+        }
+    }
+
+    //==============================================================
+    //binary search
+    function binarySearch()
+    {
+        var BinaryFind = document.getElementById("binarySearchData").value;
+        var binaryResult;
+        var binarySearchAlgo = (BinaryFind, array)=>
+        {
+            
+            var minArray = 0;
+            var maxArray = array.length - 1;
+            while (minArray <= maxArray)
+            {
+                var middleArray =  Math.round((minArray + maxArray) / 2);
+                if (BinaryFind == array[middleArray])
+                {
+                    return middleArray;
+                }
+                if (BinaryFind > array[middleArray])
+                {
+                    minArray = middleArray + 1;
+                }
+                else
+                {
+                    maxArray = middleArray - 1;
+                }
+            }
+            return -1;
+        }
+        binaryResult = binarySearchAlgo(BinaryFind, array);
+        if (binaryResult !== -1)
+        {
+            document.getElementById("binaryResult").innerHTML = "Your data is in the index of " + binaryResult;
+        }
+        else
+        {
+            document.getElementById("binaryResult").innerHTML = "Your data is NOT in the array";
+        }
+
+        if (BinaryFind == "" || BinaryFind == null)
+        {
+            alert("You must enter a number");
+            document.getElementById("binaryResult").innerHTML = "";
+        }
+    }
+
+    //==============================================================
+    //Insertion Sort
+    function insertionSort(array)
+    {
+        const lengthArray = array.length;
+        var index = 1;
+        for (index; index < lengthArray; index++)
+        {
+            var current = array[index];
+            var compare = index - 1;
+            if (compare >= 0 && array[compare] > current)
+            {
+                array[compare + 1] = array[compare];
+                compare--;
+            }
+            array[compare + 1] = current;
+        }
+        return array;
+    }
+    console.log(insertionSort(array));
+
+    //==============================================================
+    //Insertion Sort
+</script>

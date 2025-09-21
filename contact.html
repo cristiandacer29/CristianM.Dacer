@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+</head>
+<body>
+    <div class="wraper">
+        <header>
+            <div class="header-flex">
+                <div>
+                    <a href="index.html" class="logo">
+                        <img src="img/logo.ico" alt="logo">
+                    </a>
+                </div>
+                <ul><a href="index.html">HOME</a></ul>
+                <ul><a href="portfolio.html">PORTFOLIO</a></ul>
+                <ul><a href="contact.html" class="active">CONTACT</a></ul>
+            </div>
+        </header>
+        <div class="content">
+            <div class="contact glass-effect left-to-center-animation">
+                <h2 class="contact-logo">
+                    Contact number:
+                </h2>
+                <p>+63 948 862 7159 (TNT)</p>
+                <p>+63 966 208 2520 (GLOBE)</p>
+                <h2 class="contact-address">
+                    Address:
+                </h2>
+                <p>
+                    Bulawan Sr., Lupi, Camarines Sur
+                </p>
+            </div>
+            <div class="message neumorphism box-background right-to-center-animation">
+                <form action="sendEmail.php" method="post" enctype="multipart/form-data">
+                    <h2>
+                        Contact me.
+                    </h2>
+                    <span>
+                        Your email: 
+                    </span>
+                    <input type="email" name="email" class="neumorphism" placeholder="Email_Name@email.com" required>
+                    <span>
+                        Your Subject: 
+                    </span>         
+                    <input type="taxt" name="subject" class="neumorphism" placeholder="Subject" autocomplete="off" required>
+                    <span>
+                        Your Message 
+                    </span>
+                    <textarea name="message" id="" class="neumorphism" placeholder="Message..." required autocomplete="off" required></textarea>
+                    <input type="text" name="contact" class="contact-trick">
+                    <button type="submit" name="submit" class="neumorphism-raise button-hover">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div >
+                <span class="github-icon">
+                    GitHub :
+                </span>
+                <a href="https://github.com/cristiandacer29" target="_blank">cristiandacer29</a> &nbsp;
+                <span class="gmail-icon">
+                    Gmail :
+                </span>
+                <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank"
+                >cristiandacer29@gmail.com</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

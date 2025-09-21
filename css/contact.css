@@ -1,0 +1,119 @@
+.content{
+    min-height: calc(100dvh - 8rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.contact{
+    grid-column-start: span 2;
+    grid-row: span 5;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact > h2{
+    padding-left: 2.1rem;
+    position: relative;
+}
+.contact > p{
+    padding-left: 3rem;
+    
+}
+.contact-logo::before{
+    content: "";
+    position: absolute;
+    left: 0rem;
+    width: 24px;
+    aspect-ratio: 1/1;
+    background-image: url("../img/icons/icon_02.png");
+    background-size: contain;
+}
+.contact-address::before{
+    content: "";
+    position: absolute;
+    left: 0rem;
+    width: 24px;
+    aspect-ratio: 1/1;
+    background-image: url("../img/icons/icon_06.png");
+    background-size: contain;
+}
+.message{
+    grid-column-start: span 3;
+    grid-row: span 5;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+form > h2{
+    margin-bottom: 0.1em;
+}
+.contact-trick{
+    display: none;
+    visibility: hidden;
+}
+span{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+input, textarea{
+    margin: 0.5rem;
+    border-radius: 1rem;
+    padding-block: 1em;
+    padding-inline: 1em;
+    box-sizing: border-box;
+    background-color: rgb(215, 215, 215);
+}
+input:hover, textarea:hover{
+    background-color: rgb(254, 252, 252);
+}
+input:focus, textarea:focus{
+    outline: 3px solid rgb(0, 105, 197);
+}
+textarea{
+    width: calc(100% - 1rem);
+    height: 9rem;
+    resize: none;
+    box-sizing: border-box;
+    overflow: auto;
+    margin-bottom: 4rem;
+}
+button[type=submit]{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 50%;
+}
+@media only screen and (max-width: 800px) {
+    .content{
+        min-height: calc(100dvh - 8rem);;
+        padding: 1rem;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .contact{
+        align-items: center;
+        grid-column-start: span 5;
+        grid-row: span 2;
+    }
+    .contact > p{
+        padding-left: 0rem;
+        
+    }
+    .message{
+        grid-column-start: span 5;
+        grid-row: span 3;
+    }
+}
