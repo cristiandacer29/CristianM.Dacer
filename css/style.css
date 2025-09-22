@@ -186,6 +186,12 @@ footer .svg svg{
 footer div{
     padding-block: 1rem;
 }
+/* @media --------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .wraper{
+        width: clamp(320px, calc(100% - 0.5em), 2000px);
+    }
+}
 /* animation --------------------------------------------------*/
 #Layer_1{
 
