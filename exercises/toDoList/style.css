@@ -3,8 +3,8 @@
 
     --color-highlight: rgba(255, 255, 255, 0.272);
     --color-shadow: rgba(0, 0, 0, 0.5);
-    --font-background: rgb(113, 178, 239);
-    --box-backgroud: rgb(214, 199, 199);
+    --font-background: rgb(80, 88, 108);
+    --box-backgroud: rgb(220, 226, 240);
     box-sizing: border-box;
 }
 /* *{
@@ -12,6 +12,7 @@
 } */
 body{
     background-color: var(--font-background);
+    color: var(--font-background);
     margin: 0;
     padding: 0;
 }
@@ -60,6 +61,7 @@ body{
     border: 0px;
     outline: 0px;
     background-color: var(--box-backgroud);
+    color: var(--font-background);
 }
 .search > button{
     position: absolute;
