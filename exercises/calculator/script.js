@@ -4,9 +4,6 @@ function buttonValue(value)
     var input = "";
     var input = document.getElementById("numberInput");
     var acceptedInput = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, '+', '-', '*', '/', '=', '√'];
-
-
-
     if(value =='CE')
     {
         input.value  =  "";
@@ -20,8 +17,7 @@ function buttonValue(value)
         else
         {
             input.value = input.value.slice(0, input.value.length-1)
-        }
-        
+        } 
     }
     else if(value == '=')
     {
@@ -62,7 +58,6 @@ function buttonValue(value)
             alert("Invalid input");
             input.value = "";
         }
-        
     }
     else
     {
