@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Size</title>
+    <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+        }
+        .container{
+            width: clamp(300px, 100dvw, 2000px);
+            height: 100dvh;
+            box-sizing: border-box;
+            background-color: red;
+            object-fit: contain;
+            padding: 1em;
+            margin-inline: auto;
+            overflow: auto;
+        }
+        .sub-container{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .close{
+            position: absolute;
+            width: 1.5rem;
+            aspect-ratio: 1;
+            top: 1em;
+            left: 1em;
+            object-fit: cover;
+        }
+        .nav{
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translatex(-50%);
+            width: 100dvw;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+        }
+        span{
+            width: 1em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: yellow;
+            display: inline-block;
+            margin-inline: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="close">
+        <img src="img/icons/Error.png" alt="">
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <img src="img/myImages/IMG2.jpg" alt="">
+            <img src="img/myImages/IMG1.jpg" alt="">
+            <img src="img/myImages/IMG2.jpg" alt="">
+        </div>
+    </div>
+    <div class="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

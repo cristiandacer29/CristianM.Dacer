@@ -55,10 +55,12 @@
     align-items: center;
     justify-content: space-between;
 }
+.img-min-height{
+    min-height: 15rem;
+}
 .compile-image-container{
     position: relative;
     width: 30%;
-    min-height: 15rem;
 }
 .compile-image-container:hover{
     transform: scale(1.01);
@@ -120,6 +122,11 @@ button > h2{
 }
 .exercises-images > img:active{
     transform: scale(0.95);
+}
+iframe{
+    height: 100%;
+    width: 100%;
+    
 }
 .modal{
     position:fixed;

@@ -38,6 +38,9 @@
     margin-inline: 10%;
 
 }
+.paragraph-width li{
+    padding-block: 0.5em;
+}
 table{
     width: 100%;
 }
