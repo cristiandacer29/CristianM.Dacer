@@ -90,4 +90,7 @@ img{
     .container{
     height:clamp(300px, calc(100dvh - 2em), 700px);
     }
+    .container::-webkit-scrollbar{
+        display: unset;
+    }
 }
