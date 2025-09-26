@@ -7,7 +7,7 @@ body{
 }
 .container{
     width: clamp(300px, calc(100dvw - 10rem), 2000px);
-    height:clamp(400px, calc(100dvh - 2em), 800px);
+    height:clamp(400px, calc(100dvh - 2em), 1000px);
     margin-block: 1em;
     box-sizing: border-box;
     background-color: red;
@@ -86,5 +86,8 @@ img{
 @media only screen and (max-width: 800px) {
     .sub-container{
         min-width: 100%;
+    }
+    .container{
+    height:clamp(300px, calc(100dvh - 2em), 700px);
     }
 }
