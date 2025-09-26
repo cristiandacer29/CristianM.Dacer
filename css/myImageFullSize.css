@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+.container{
+    width: clamp(300px, calc(100dvw - 10rem), 2000px);
+    height: calc(100dvh - 2em);
+    margin-block: 1em;
+    box-sizing: border-box;
+    background-color: red;
+    padding: 1em;
+    margin-inline: auto;
+    overflow: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    scroll-snap-type: X mandatory;
+    anchor-name: --container;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.container::scroll-button(right), .container::scroll-button(left){
+    content: "\21E8";
+    font-size: 1.5rem;
+    margin: 0px;
+    font-weight:bold;
+    border-radius: 10px;
+    color: rgb(0, 105, 197);
+    z-index: 3;
+    width: 2rem;
+    height: 5rem;
+    text-align: center;
+    border: 0px;
+    background-color: rgb(163, 163, 163);
+    position-anchor: --container;
+    position: fixed;
+    position-area: right center;
+    cursor: pointer;
+    transform: translateX(0.5em);
+    box-shadow: 0.3rem 0.3rem 0.4rem rgba(0, 0, 0, 0.478), -0.2rem -0.2rem 0.2rem rgba(255, 255, 255, 0.601);
+}
+.container::scroll-button(*):disabled
+{
+    opacity: 0.3;
+}
+.container::scroll-button(right):hover{
+    transform: translateX(0.5em) scale(1.1);
+}
+.container::scroll-button(left):hover{
+    transform: translateX(-0.5em) scale(1.1)
+}
+.container::scroll-button(left){
+    content: "\21E6";
+    position-area: left center;
+    transform: translateX(-0.5em);
+    background-color: rgb(163, 163, 163);
+}
+.sub-container{
+    min-width: calc(70% - 2rem);
+    margin-inline: 1rem;
+    max-height: 100%;
+    padding: 1em;
+    border: 1px solid green;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    border-radius: min(3dvw, 32px);
+    overflow: hidden;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.close{
+    position: absolute;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    left: 1em;
+    object-fit: cover;
+    z-index: 3
+}
+@media only screen and (max-width: 800px) {
+    .sub-container{
+        min-width: 100%;
+    }
+}
