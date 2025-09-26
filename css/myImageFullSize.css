@@ -7,7 +7,7 @@ body{
 }
 .container{
     width: clamp(300px, calc(100dvw - 10rem), 2000px);
-    height: calc(100dvh - 2em);
+    height:clamp(400px, calc(100dvh - 2em), 800px);
     margin-block: 1em;
     box-sizing: border-box;
     background-color: red;
