@@ -35,8 +35,7 @@
 }
 .paragraph-width{
     width: 80%;
-    margin-inline: 10%;
-
+    margin-inline: auto;
 }
 .paragraph-width li{
     padding-block: 0.5em;
@@ -52,7 +51,11 @@ table{
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
-    padding-inline: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.my-personal-image:hover{
+    background-color: rgb(136, 136, 136);
 }
 .my-personal-image > img{
     aspect-ratio: 1;
@@ -60,4 +63,9 @@ table{
     object-fit: cover;
     padding: 0.5em;
     box-sizing: border-box;
+}
+@media only screen and (max-width: 800px) {
+    .paragraph-width{
+        width: 95%;
+    }
 }
