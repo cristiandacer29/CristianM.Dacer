@@ -66,6 +66,6 @@ table{
 }
 @media only screen and (max-width: 800px) {
     .paragraph-width{
-        width: 95%;
+        width: calc(100% - 1rem);
     }
 }
