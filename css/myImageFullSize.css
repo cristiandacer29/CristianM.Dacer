@@ -74,40 +74,34 @@ img{
     width: 1.5rem;
     aspect-ratio: 1;
     left: 1em;
-    top: -1rem;
+    top: -0.5rem;
     object-fit: cover;
     z-index: 3
 }
 @media only screen and (max-width: 800px) {
     .container{
         width: clamp(300px, calc(100% - 1em), 2000px);
-        height: calc(100% - 3rem);
+        height: clamp(600px, calc(100dvh - 3rem), 1500px);
+        margin-top: 2rem;
     }
     .sub-container{
         min-width: calc(100% - 1em);
     }
     .container::scroll-button(right), .container::scroll-button(left){
         content: "\002771";
-        font-size: 1.5rem;
-        margin: 0px;
-        font-weight:bold;
+        font-size: 1rem;
         border-radius: 10px;
         color: rgb(0, 105, 197);
         z-index: 4;
-        width: 2rem;
-        height: 5rem;
-        text-align: center;
-        border: 0px;
-        background-color: rgb(163, 163, 163);
-        position-anchor: --container;
-        position: absolute;
-        align-self: anchor-center;
+        width: 1.5rem;
         right: anchor(right);
-        cursor: pointer;
         box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.478);
     }
     .container::scroll-button(left){
         content: "\002770";
         left: anchor(left);
+    }
+    .close{
+        top: -1.9rem;
     }
 }
