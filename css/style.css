@@ -268,7 +268,7 @@ footer div{
     }
 }
 .scale-animation{
-    animation: toNormalScale 0.2s ease-in normal forwards;
+    animation: toNormalScale 0.1s ease-in normal forwards;
 }
 @keyframes toNormalScale{
     from{

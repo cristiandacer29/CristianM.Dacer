@@ -13,38 +13,38 @@ function apdateDiscription(newPath,newDiscription){
 }
 if (project == "dishwashing") {
     folderName = "dishwashing/";
-    imageList = ["calamansi.png",
-                "lemon.png",
-                "mockup.png"]; 
+    imageList = ["Calamansi.png",
+                "Lemon.png",
+                "Mockup.png"]; 
     apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "jersey"){
     folderName = "jersey/";
-    imageList = ["banner-01.png",
-                "gloves.png",
-                "jersey-b01_03.png",
-                "jersey-f01_02.png",
-                "PANTS_b03.png",
-                "PANTS_f02.png",
-                "SOCKS.png"]; 
+    imageList = ["Cycling team banner.png",
+                "Cycling glove.png",
+                "Cycling shirt front view.png",
+                "Cycling shirt back view.png",
+                "Cycing shorts front view.png",
+                "Cycling shorts back view.png",
+                "Cycling socks.png"]; 
     apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "logoDesign"){
     folderName = "waterStationLogo/";
-    imageList = ["jme-logo.png",
-                "logo3d.png",
-                "logo vertical.png",
-                "logo_banner horizontal.png",
-                "long banner.jpg",
-                "BANNER.png",
-                "schedule.jpg",
-                "business Card mockup.png",
-                "business Card.png",
-                "mockup.jpg",
-                "mockup1.jpg",
-                "mockup2.jpg",
-                "STICKER1.png",
-                "STICKER2.png"]; 
+    imageList = ["JME logo.png",
+                "JME logo 3D version.png",
+                "JME logo vertical style.png",
+                "JME logo horizontal style.png",
+                "JME establishment banner.jpg",
+                "JME banner.png",
+                "Business schedule banner.jpg",
+                "Business card mockup.png",
+                "Business card.png",
+                "2.5 gallon water jug mockup.jpg",
+                "5 gallon water jug mockup.jpg",
+                "5 gallon water dispenser jug mockup.jpg",
+                "JME circular sticker.png",
+                "JME rectangular sticker.png"]; 
     apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else{
