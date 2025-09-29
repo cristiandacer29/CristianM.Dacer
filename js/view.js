@@ -26,7 +26,9 @@ else if(project == "jersey"){
                 "Cycling shirt back view.png",
                 "Cycing shorts front view.png",
                 "Cycling shorts back view.png",
-                "Cycling socks.png"]; 
+                "Cycling socks.png",
+                "Final design front view.jpg",
+                "Final design back view.jpg"]; 
     apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "logoDesign"){
