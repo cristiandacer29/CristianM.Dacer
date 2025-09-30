@@ -98,10 +98,10 @@
 hr{
     width: 100%;
 }
-button{
+.download-button{
     margin-inline: auto;
 }
-button > h2{
+.download-button h2{
     color: white;
     margin-inline: 4rem;
 }
