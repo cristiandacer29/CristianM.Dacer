@@ -1,22 +1,22 @@
 //getImage
 const images = document.getElementById("images");
 const bigSizeImage = document.getElementById("bigSizeImage");
-const discription = document.getElementById("discription");
+const description = document.getElementById("description");
 
 var path = "img/";
 var folderName;
 var imageList = [];
 var project = sessionStorage.getItem("project");
-function apdateDiscription(newPath,newDiscription){
+function updateDescription(newPath,newDescription){
     bigSizeImage.src = newPath;
-    discription.innerHTML = decodeURIComponent(newDiscription);
+    description.innerHTML = decodeURIComponent(newDescription);
 }
 if (project == "dishwashing") {
     folderName = "dishwashing/";
     imageList = ["Calamansi.png",
                 "Lemon.png",
                 "Mockup.png"]; 
-    apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
+    updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "jersey"){
     folderName = "jersey/";
@@ -24,12 +24,12 @@ else if(project == "jersey"){
                 "Cycling glove.png",
                 "Cycling shirt front view.png",
                 "Cycling shirt back view.png",
-                "Cycing shorts front view.png",
+                "Cycling shorts front view.png",
                 "Cycling shorts back view.png",
                 "Cycling socks.png",
                 "Final design front view.jpg",
                 "Final design back view.jpg"]; 
-    apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
+    updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "logoDesign"){
     folderName = "waterStationLogo/";
@@ -47,7 +47,7 @@ else if(project == "logoDesign"){
                 "5 gallon water dispenser jug mockup.jpg",
                 "JME circular sticker.png",
                 "JME rectangular sticker.png"]; 
-    apdateDiscription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
+    updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else{
     window.history.back();
@@ -67,7 +67,7 @@ function getFileName(path){
 images.addEventListener("click", clickedImage =>{
     if (clickedImage.target.src || undefined) {
         bigSizeImage.src = clickedImage.target.src;
-        discription.innerHTML = decodeURIComponent(getFileName(clickedImage.target.src));
+        description.innerHTML = decodeURIComponent(getFileName(clickedImage.target.src));
     }
 })
 

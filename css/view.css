@@ -39,7 +39,7 @@
     height: 100%;
     background-color: rgb(159, 159, 159);
 }
-.discription{
+.description{
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -48,7 +48,7 @@
     padding: 0.5em;
     box-sizing: border-box;
 }
-.discription > p{
+.description > p{
     text-align: center;
     color: white;
 }
