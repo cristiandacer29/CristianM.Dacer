@@ -13,9 +13,9 @@ function updateDescription(newPath,newDescription){
 }
 if (project == "dishwashing") {
     folderName = "dishwashing/";
-    imageList = ["Calamansi.png",
-                "Lemon.png",
-                "Mockup.png"]; 
+    imageList = ["calamansi.png",
+                "lemon.png",
+                "mockup.png"]; 
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "jersey"){
