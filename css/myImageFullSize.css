@@ -32,7 +32,7 @@ body{
     height: 5rem;
     text-align: center;
     border: 0px;
-    background-color: rgb(163, 163, 163);
+    background-color: var(--background-color);
     position-anchor: --container;
     position: absolute;
     align-self: anchor-center;
