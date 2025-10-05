@@ -10,60 +10,113 @@
             font-family: Arial, Helvetica, sans-serif;
             background-color: #344F1F;
             color: #F9F5F0;
+            margin: 0px;
+        }
+        .container{
+            width: clamp(300px, 100dvw, 2000px);
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            box-sizing: border-box;
+            text-align: center;
+            
+        }
+        .container > div:first-child{
+            width: 100%;
+            min-width: 300px;
+            background-color: #213214;
+            box-sizing: border-box;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+        .container > div{
+            width: calc(50% - 0.5rem);
+            min-width: 300px;
+            background-color: #213214;
+            box-sizing: border-box;
+            padding: 1rem;
+            border-radius: 10px;
         }
         input, button{
             border-radius: 20px;
             padding: 0.5em;
+            color: #344F1F;
+        }
+        input{
+            width: 5rem;
             border: 3px solid #F4991A;
             background-color: #F2EAD3;
-            color: #344F1F;
+            margin-right: 1rem;
+        }
+        button{
+            margin: 1rem;
+            margin-left: 0rem;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            border: 3px solid #F2EAD3;
+            background-color: #F4991A;
+        }
+        h2{
+            color: #F4991A;
         }
     </style>
 </head>
 <body>
-    <h2>Search algorithms</h2>
-    <h3>Linear Search</h3>
-    <p id="array">List of array </p>
-    <span for="linearSearchData">Enter Number 1-9</span>
-    <input type="number" name="" min="1" max="9" id="linearSearchData">
-    <button type="button"  onclick="linearSearch()">Submit</button>
-    <p id="linearResult"></p>
-    <hr>
-    <h3>Binary Search</h3>
-    <p id="array1">List of array </p>
-    <span for="binarySearchData">Enter Number 1-9</span>
-    <input type="number" name="" min="1" max="9" id="binarySearchData">
-    <button type="button"  onclick="binarySearch()">Submit</button>
-    <p id="binaryResult"></p>
-
-    <hr>
+    <div class="container">
+        <div>
+            <h2>Search algorithms</h2>
+            <p>Array value : 1, 2, 3, 4, 5, 6, 7, 8, 9</p>
+            <p>Array index : 0, 1, 2, 3, 4, 5, 6, 7, 8</p>
+        </div>
+        <div>
+            <h3>Linear Search</h3>
+            <p id="array">List of array </p>
+            <span for="linearSearchData">Enter Number 1-9</span>
+            <input type="number" name="" min="1" max="9" id="linearSearchData">
+            <button type="button"  onclick="linearSearch()">Submit</button>
+            <p id="linearResult"></p>
+        </div>
+        <div>
+            <h3>Binary Search</h3>
+            <p id="array1">List of array </p>
+            <span for="binarySearchData">Enter Number 1-9</span>
+            <input type="number" name="" min="1" max="9" id="binarySearchData">
+            <button type="button"  onclick="binarySearch()">Submit</button>
+            <p id="binaryResult"></p>
+        </div>
+    </div>
+    
 </body>
 </html>
 
 <script>
     var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    document.getElementById("array").innerHTML += array;
-    document.getElementById("array1").innerHTML += array;
+    document.getElementById("array").innerHTML += sortedArray;
+    document.getElementById("array1").innerHTML += sortedArray;
 
     //==============================================================
     //linear search
     function linearSearch()
     {
-        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-        var find = document.getElementById("linearSearchData").value;
-        var search = (find, array)=>
+        var sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        var toFind = document.getElementById("linearSearchData").value;
+        var search = (find, sortedArray)=>
         {
             var index = 0;
-            for (index; index < array.length; index++)
+            for (index; index < sortedArray.length; index++)
             {
-                if (array[index] == find)
+                if (sortedArray[index] == toFind)
                 {
                     return index;
                 } 
             }
             return -1;
         }
-        var result = search(find, array);
+        var result = search(toFind, sortedArray);
         if (result !== -1)
         {
             document.getElementById("linearResult").innerHTML = "Your data is in the index of " + result;
@@ -72,7 +125,7 @@
         {
             document.getElementById("linearResult").innerHTML = "Your data is NOT in the array";
         }
-        if (find == "" || find == null)
+        if (toFind == "" || toFind == null)
         {
             alert("You must enter a number");
             document.getElementById("linearResult").innerHTML = "";

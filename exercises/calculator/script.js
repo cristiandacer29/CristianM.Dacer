@@ -37,9 +37,9 @@ function buttonValue(value)
             {
                 var equalCount = 0
                 var arrayValue = input.value.split('');
-                arrayValue.forEach(eachCharater => {
+                arrayValue.forEach(eachCharacter => {
                     acceptedInput.forEach(acceptedCharacter =>{
-                        if (eachCharater == acceptedCharacter) {
+                        if (eachCharacter == acceptedCharacter) {
                             equalCount++;
                         }
                     })

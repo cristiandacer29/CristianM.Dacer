@@ -32,13 +32,13 @@ p
     align-content: center;
     justify-content: center;
     align-items: stretch;
-    max-width: 100%;
-    min-width: 250px;
+    width: clamp(300px, 100%, 2000px);
     gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
     box-sizing: border-box;
     padding: 0.5rem;
+    margin-inline: auto;
 }
 .grid-item
 {
