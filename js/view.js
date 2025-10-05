@@ -68,6 +68,9 @@ images.addEventListener("click", clickedImage =>{
     if (clickedImage.target.src || undefined) {
         bigSizeImage.src = clickedImage.target.src;
         description.innerHTML = decodeURIComponent(getFileName(clickedImage.target.src));
+        bigSizeImage.classList.remove('popup-animation');
+        void bigSizeImage.offsetWidth;
+        bigSizeImage.classList.add('popup-animation');
     }
 })
 

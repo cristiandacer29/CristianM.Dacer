@@ -94,10 +94,12 @@ min-height: 5rem;
     .img-big-container{
         grid-column: span 4;
         grid-row: span 3;
+        height: calc(80dch - 1.7rem);
     }
     .imgs-container{
         grid-row-start: 4;
         grid-column: span 4;
+        height: 20dvh;
         overflow: auto;
         display: flex;
         flex-wrap: nowrap;
@@ -105,8 +107,8 @@ min-height: 5rem;
         align-items: center;
     }
     .imgs-container img{
-        height: 100%;
-        object-fit:cover;
+        height: 80%;
+        object-fit:contain;
         margin-inline: 0.5em;
         box-sizing: border-box;
     }
