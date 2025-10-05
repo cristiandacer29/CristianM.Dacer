@@ -13,9 +13,9 @@ function updateDescription(newPath,newDescription){
 }
 if (project == "dishwashing") {
     folderName = "dishwashing/";
-    imageList = ["calamansi.png",
-                "lemon.png",
-                "mockup.png"]; 
+    imageList = ["Calamansi.png",
+                "Lemon.png",
+                "Mockup.png"]; 
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "jersey"){
@@ -27,8 +27,8 @@ else if(project == "jersey"){
                 "Cycling shorts front view.png",
                 "Cycling shorts back view.png",
                 "Cycling socks.png",
-                "Final design front view.jpg",
-                "Final design back view.jpg"]; 
+                "Final design front view.png",
+                "Final design back view.png"]; 
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "logoDesign"){

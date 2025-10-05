@@ -26,7 +26,7 @@ body{
 .grid{
     display: grid;
 }
-.wraper{
+.wrapper{
     margin-inline: auto;;
     width: clamp(320px, calc(100% - 8rem), 2000px);
     min-height: 100dvh;
@@ -90,10 +90,10 @@ button{
     transform: scale(0.99);
 }
 .glass-effect{
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(0, 105, 197, 0.107);
     border-radius: min(3dvw, 32px);
     backdrop-filter: blur(3.7px);
-    border: 1px solid rgba(255, 255, 255, 0.46);
+    border: 1px solid rgba(0, 105, 197, 0.571);
     box-shadow: 0.4rem 0.4rem 0.4rem rgba(0, 0, 0, 0.478)
 }
 .to-animate{
