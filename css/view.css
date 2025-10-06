@@ -11,7 +11,6 @@
     aspect-ratio: 1;
     border-radius: 50%;
     z-index: 1;
-    
 }
 .close:hover{
     box-shadow:0rem 0rem 0.3rem rgb(0, 105, 197);

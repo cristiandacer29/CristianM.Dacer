@@ -75,6 +75,7 @@ input, textarea{
     padding-inline: 1em;
     box-sizing: border-box;
     background-color: rgb(215, 215, 215);
+    transition: ease-in 0.1s;
 }
 input:hover, textarea:hover{
     background-color: rgb(254, 252, 252);

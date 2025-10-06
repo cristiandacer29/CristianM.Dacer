@@ -28,12 +28,11 @@
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    padding: 1rem;
     height: clamp(30rem, calc(100dvh - 7vh - 1rem),calc(100dvh - 7dvh - 1rem));
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 .list::-webkit-scrollbar{
-    z-index: -1;
+    display: none;
 }
 .list > h2{
     width: 100%;
@@ -109,25 +108,27 @@ hr{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin-bottom: 1.rem;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 2rem;
+    margin: 1rem ;
 }
 .exercises-images > img{
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 22px);
     padding: 1rem;
     box-sizing: border-box;
-    filter: drop-shadow(0.5em 0.5em 0.4em rgba(0, 0, 0, 0.66));
     object-fit: contain;
+    transition: 0.1s ease-in;
 }
 .exercises-images > img:hover{
-    transform: scale(1.05);
+    background: rgba(0, 105, 197, 0.172);
 }
 .exercises-images > img:active{
-    transform: scale(0.95);
+    background: rgba(0, 105, 197, 0.172);
 }
 iframe{
     height: 100%;
     width: 100%;
-    
 }
 .modal{
     position:fixed;
@@ -149,6 +150,7 @@ iframe{
     left: 0.5em;
     top: 0.5em;
     z-index: 1;
+    transition: 0.1s ease-in;
 }
 .modal > img:first-child:hover{
 filter: drop-shadow(0 0 0.5em red);

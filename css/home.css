@@ -53,9 +53,10 @@ table{
     align-items: center;
     padding: 1rem;
     border-radius: 20px;
+    transition: ease-in 0.1s;
 }
 .my-personal-image:hover{
-    background-color: rgb(136, 136, 136);
+    background-color: rgb(195, 195, 195);
 }
 .my-personal-image > img{
     aspect-ratio: 1;
