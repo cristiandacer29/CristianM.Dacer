@@ -4,7 +4,7 @@
     --color-highlight: rgba(255, 255, 255, 0.272);
     --color-shadow: rgba(0, 0, 0, 0.5);
     --font-background: rgb(80, 88, 108);
-    --box-backgroud: rgb(220, 226, 240);
+    --box-background: rgb(220, 226, 240);
     box-sizing: border-box;
 }
 /* *{
@@ -23,7 +23,7 @@ body{
     box-shadow: 3px 3px 4px var(--color-shadow), -2px -2px 3px var(--color-highlight);
 }
 .container{
-    background-color: var(--box-backgroud);
+    background-color: var(--box-background);
     margin-top: 1rem;
     margin-inline: auto;
     width: clamp(300px, 50dvw, 1000px);
@@ -60,7 +60,7 @@ body{
     box-sizing: border-box;
     border: 0px;
     outline: 0px;
-    background-color: var(--box-backgroud);
+    background-color: var(--box-background);
     color: var(--font-background);
 }
 .search > button{
@@ -73,7 +73,7 @@ body{
     border-radius: 20px;
     border: 0px;
     outline: 0px;
-    background-color: var(--box-backgroud);
+    background-color: var(--box-background);
     color: var(--font-background);
     font-weight: bold;
 }
@@ -123,6 +123,7 @@ border-radius: 50%;
 }
 .flex-container > .decoration::before{
 content: "\2713";
+color:var(--box-background);
 height: 1.2rem;
 aspect-ratio: 1;
 background-color: var(--font-background);
