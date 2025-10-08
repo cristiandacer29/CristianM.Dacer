@@ -49,6 +49,7 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    position: relative;
 }
 form{
     position: relative;
@@ -96,6 +97,28 @@ button[type=submit]{
     bottom: 0.5rem;
     right: 0.5rem;
     width: 50%;
+}
+.disable-message{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(128, 128, 128, 0.722);
+    padding: 1rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.disable-message > h2{
+    color: red;
+}
+.disable-message p{
+    color: rgb(255, 255, 255);
 }
 @media only screen and (max-width: 800px) {
     .content{
