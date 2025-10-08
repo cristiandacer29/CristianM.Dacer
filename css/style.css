@@ -65,7 +65,6 @@ a:hover{
     border: 0px;
 }
 .box-background{
-    background: var(--background-color);
     backdrop-filter: blur(1px);
     border-radius: min(3dvw, 32px);
     padding: 1rem;

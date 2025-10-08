@@ -10,7 +10,6 @@ body{
     height:clamp(400px, calc(100dvh - 2em), 1000px);
     margin-block: 1em;
     box-sizing: border-box;
-    background-color: red;
     padding: 1em;
     margin-inline: auto;
     overflow: scroll;
@@ -63,6 +62,7 @@ body{
     box-sizing: border-box;
     scroll-snap-align: center;
     border-radius: min(3dvw, 32px);
+    background-color: var(--background-color);
 }
 img{
     width: 100%;
