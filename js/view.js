@@ -21,12 +21,13 @@ if (project == "dishwashing") {
 else if(project == "jersey"){
     folderName = "jersey/";
     imageList = ["Cycling team banner.png",
-                "Cycling glove.png",
+                "Tailor render.png",
                 "Cycling shirt front view.png",
                 "Cycling shirt back view.png",
                 "Cycling shorts front view.png",
                 "Cycling shorts back view.png",
                 "Cycling socks.png",
+                "Cycling glove.png",
                 "Final design front view.png",
                 "Final design back view.png"]; 
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
