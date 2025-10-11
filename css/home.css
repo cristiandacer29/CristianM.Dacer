@@ -15,6 +15,7 @@
 .content .img-container{
     width: min(320px, 25%);
     text-align: center;
+    min-height: 32rem;
 }
 .rgb-animation{
     padding: 2px;
