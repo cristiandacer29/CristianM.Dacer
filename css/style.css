@@ -1,7 +1,6 @@
 
 /* general ----------------------------------------------*/
 :root{
-    color-scheme: light dark;
     --main-color: rgb(0, 105, 197);
     --p-color: rgb(31, 31, 31);
     --background-color: rgb(209, 209, 209);
@@ -27,6 +26,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+
 }
 .grid{
     display: grid;
