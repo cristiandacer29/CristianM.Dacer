@@ -1,10 +1,15 @@
+
 .content{
     display: flex;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
     align-items: stretch;
-    min-height: calc(85dvh - 8rem);
+    min-height: 40dvh;
+}
+.welcome-paragraph{
+    text-indent: 2rem;
+    font-weight: 100;
 }
 .content div:last-child{
     align-content: center;
@@ -13,9 +18,8 @@
     
 }
 .content .img-container{
-    width: min(320px, 25%);
+    width: min(320px, 45%);
     text-align: center;
-    min-height: 32rem;
 }
 .rgb-animation{
     padding: 2px;
