@@ -48,7 +48,7 @@
 .content .img-container img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
     box-sizing: border-box;
     border-radius: min(3dvw, 32px);
 }
@@ -76,19 +76,19 @@ table{
 }
 .my-personal-image{
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    padding: 1rem;
     border-radius: 20px;
     transition: ease-in 0.1s;
+    height: 10rem;
 }
 .my-personal-image:hover{
     background-color: rgb(195, 195, 195);
 }
 .my-personal-image > img{
-    aspect-ratio: 1;
-    width: clamp( calc(100px - 2em), calc(100% / 3 - 3em), calc(2000px / 3 - 2rem));
+    height: 100%;
     object-fit: cover;
     padding: 0.5em;
     box-sizing: border-box;
