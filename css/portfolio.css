@@ -27,6 +27,7 @@
     align-content: flex-start;
     flex-wrap: wrap;
     height: calc(100dvh - 10.5rem);
+    min-height: 25rem;
     overflow-y: scroll;
     padding-inline: 1rem;
 }
@@ -61,7 +62,7 @@
 }
 .compile-image-container > img{
     position: absolute;
-    width: calc(10rem - 10%);
+    width: calc(10rem - 25%);
 }
 .compile-image-container > img:first-child{
     left: 50%;
@@ -104,11 +105,12 @@ hr{
     align-content: flex-start;
     justify-content: center;
     box-sizing: border-box;
-    gap: 2rem;
+    gap: 3rem;
     margin: 1rem ;
+    width: 100%;
 }
 .exercises-images > img{
-    width: calc(100% / 3 - 22px);
+    width: calc(100% / 3 - 3rem);
     padding: 1rem;
     box-sizing: border-box;
     object-fit: contain;
@@ -188,4 +190,11 @@ filter: drop-shadow(0 0 0.5em red);
         padding: 0.5em;
         font-size: 1em;
     }
+    .exercises-images{
+        gap: 1rem;
+    }
+    .exercises-images > img{
+    width: calc(100% / 3 - 1rem);
+    padding: 0.3em;
+}
 }

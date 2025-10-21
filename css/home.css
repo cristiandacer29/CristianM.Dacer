@@ -76,19 +76,23 @@ table{
 }
 .my-personal-image{
     display: flex;
-    gap: 1rem;
+    gap: 2.5rem;
     justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 3rem;
     transition: ease-in 0.1s;
-    height: 10rem;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: auto;
 }
 .my-personal-image:hover{
     background-color: rgb(195, 195, 195);
 }
 .my-personal-image > img{
     height: 100%;
+    width: calc(100% / 3);
+    aspect-ratio: 1;
     object-fit: cover;
     padding: 0.5em;
     box-sizing: border-box;
@@ -96,5 +100,10 @@ table{
 @media only screen and (max-width: 800px) {
     .paragraph-width{
         width: calc(100% - 1rem);
+    }
+    .my-personal-image{
+        padding: 0.5rem;
+        gap: 1em;
+        border-radius: 1rem;
     }
 }
