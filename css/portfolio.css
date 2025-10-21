@@ -62,7 +62,7 @@
 }
 .compile-image-container > img{
     position: absolute;
-    width: calc(10rem - 25%);
+    width: calc(10rem - 10%);
 }
 .compile-image-container > img:first-child{
     left: 50%;
@@ -194,7 +194,10 @@ filter: drop-shadow(0 0 0.5em red);
         gap: 1rem;
     }
     .exercises-images > img{
-    width: calc(100% / 3 - 1rem);
-    padding: 0.3em;
-}
+        width: calc(100% / 3 - 1rem);
+        padding: 0.3em;
+    }
+    .compile-image-container > img{
+        width: calc(10rem - 45%);
+    }
 }
