@@ -46,7 +46,7 @@ h3, p{
     font-family: Montserrat;
 }
 p{
-    text-indent: clamp(1.7rem, 2rem, 1.2rem);
+    text-indent: clamp(1rem, 1.5rem, 2rem);
     font-size: clamp(0.6rem, 0.8rem, 1.1rem);
     color: var(--p-color);
     text-align: justify;
