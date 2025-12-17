@@ -153,9 +153,40 @@ header{
 .active{
     color: var(--active-color);
 }
+.header-flex > ul .active::before{
+    filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(7492%) hue-rotate(212deg) brightness(89%) contrast(101%);
+}
 .header-flex a{
     font-weight: bold;
     text-decoration: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.header-flex > div > a{
+    display: inline-block;
+    height: inherit;
+    padding: 0;
+}
+.header-flex > ul a::before{
+    position: absolute;
+    content: "";
+    background-size: cover;
+    height: 1rem;
+    aspect-ratio: 1 / 1;
+    left: 0.3rem;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(6243%) hue-rotate(196deg) brightness(93%) contrast(101%);
+}
+.header-flex > ul:nth-child(2) a::before{
+    background-image: url("../img/icons/home.svg");
+}
+.header-flex > ul:nth-child(3) a::before{
+    background-image: url("../img/icons/portfolio.svg");
+}
+.header-flex > ul:nth-child(4) a::before{
+    background-image: url("../img/icons/paper-plane.svg");
+}
+.header-flex > ul > a:hover{
+    filter: brightness(0) saturate(100%) invert(35%) sepia(96%) saturate(2352%) hue-rotate(192deg) brightness(102%) contrast(106%);
 }
 .header-flex ul:active{
     transform: scale(0.9);
@@ -173,6 +204,9 @@ footer{
     align-content: center;
     position: relative;
     
+}
+footer > div:last-child{
+    margin: auto;
 }
 
 footer span{
@@ -220,6 +254,13 @@ footer div{
 @media only screen and (max-width: 800px) {
     .wrapper{
         width: clamp(320px, calc(100% - 0.5em), 2000px);
+    }
+    .header-flex ul {
+        padding-left: 0.5rem;
+    }
+    .header-flex a{
+        font-weight: bold;
+        font-size: 0.7rem;
     }
 }
 /* animation --------------------------------------------------*/
