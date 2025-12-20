@@ -10,6 +10,7 @@
 .welcome-paragraph{
     text-indent: 2rem;
     font-weight: 100;
+    text-align: justify;
 }
 .content div:last-child{
     align-content: center;
