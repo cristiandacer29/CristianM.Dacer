@@ -26,36 +26,26 @@
     position: relative;
     padding-right: 1rem;
 }
-.button-container > a:first-child span::after{
+.button-container > a span::after{
     content: "";
     position: absolute;
     height: 1rem;
     aspect-ratio: 1;
     right: -0.5rem;
+
+    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
+}
+.button-container > a:first-child span::after{
     background: url('../img/icons/project-management.png');
     background-size: cover;
-    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
 }
 .button-container > a:nth-child(2) span::after{
-    content: "";
-    position: absolute;
-    height: 1rem;
-    aspect-ratio: 1;
-    right: -0.5rem;
     background: url('../img/icons/report.png');
     background-size: cover;
-    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
-
 }
 .button-container > a:last-child span::after{
-    content: "";
-    position: absolute;
-    height: 1rem;
-    aspect-ratio: 1;
-    right: -0.5rem;
     background: url('../img/icons/downloads.png');
     background-size: cover;
-    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
 }
 .list{
     margin-block: 0.5rem;
@@ -249,6 +239,12 @@ filter: drop-shadow(0 0 0.5em red);
         color: white;
         padding: 0.5em;
         font-size: 1em;
+    }
+    .button-container > a span::after{
+        right: -0.2rem;
+    }
+    .button-container > a > span{
+        font-size: 0.7rem;
     }
     .exercises-images{
         gap: 1rem;
