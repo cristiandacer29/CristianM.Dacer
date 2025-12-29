@@ -20,13 +20,49 @@
     color: white;
     font-weight: bold;
     background: linear-gradient(140deg, rgb(0, 105, 197), rgb(0, 69, 130));
+    padding-inline: 0.5rem;
+}
+.button-container > a > span{
+    position: relative;
+    padding-right: 1rem;
+}
+.button-container > a:first-child span::after{
+    content: "";
+    position: absolute;
+    height: 1rem;
+    aspect-ratio: 1;
+    right: -0.5rem;
+    background: url('../img/icons/project-management.png');
+    background-size: cover;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
+}
+.button-container > a:nth-child(2) span::after{
+    content: "";
+    position: absolute;
+    height: 1rem;
+    aspect-ratio: 1;
+    right: -0.5rem;
+    background: url('../img/icons/report.png');
+    background-size: cover;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
+
+}
+.button-container > a:last-child span::after{
+    content: "";
+    position: absolute;
+    height: 1rem;
+    aspect-ratio: 1;
+    right: -0.5rem;
+    background: url('../img/icons/downloads.png');
+    background-size: cover;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
 }
 .list{
     margin-block: 0.5rem;
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    height: calc(100dvh - 10.5rem);
+    height: calc(100dvh - 10.6rem);
     min-height: 25rem;
     overflow-y: scroll;
     padding-inline: 1rem;
@@ -132,6 +168,23 @@ hr{
 iframe{
     height: 100%;
     width: 100%;
+}
+.download-button span{
+    position: relative;
+    padding-right: 1.5rem;
+}.download-button span::after{
+    content: "";
+    position: absolute;
+    height: 1.5rem;
+    aspect-ratio: 1;
+    right: -0.5rem;
+    background: url('../img/icons/downloads.png');
+    background-size: cover;
+    filter: brightness(0) saturate(100%) invert(93%) sepia(100%) saturate(2%) hue-rotate(133deg) brightness(107%) contrast(101%);
+}
+custom-footer{
+    display: block;
+    min-height: 4rem;
 }
 .modal{
     position:fixed;

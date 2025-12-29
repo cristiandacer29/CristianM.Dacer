@@ -37,6 +37,11 @@ body{
     position: relative;
     /* outline: 1px solid rgb(255, 0, 0); */
 }
+.flex{
+    min-height: calc(100dvh - 8rem);
+    position: relative;
+    top: 0px
+}
 h1, h2{
     color: var(--main-color);
     font-family: karla-bold;
@@ -173,8 +178,10 @@ header{
     background-size: cover;
     height: 1rem;
     aspect-ratio: 1 / 1;
-    left: 0.3rem;
+    left: 0.2rem;
+    bottom: 2px;
     filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(6243%) hue-rotate(196deg) brightness(93%) contrast(101%);
+    background-position: cover;
 }
 .header-flex > ul:nth-child(2) a::before{
     background-image: url("../img/icons/home.svg");
@@ -184,6 +191,7 @@ header{
 }
 .header-flex > ul:nth-child(4) a::before{
     background-image: url("../img/icons/paper-plane.svg");
+    
 }
 .header-flex > ul > a:hover{
     filter: brightness(0) saturate(100%) invert(35%) sepia(96%) saturate(2352%) hue-rotate(192deg) brightness(102%) contrast(106%);
@@ -200,15 +208,10 @@ footer{
     box-sizing: border-box;
     min-height: 4rem;
     margin: 0px;
-    justify-content: center;
-    align-content: center;
     position: relative;
-    
+    display: flex;
+    align-items: flex-end;
 }
-footer > div:last-child{
-    margin: auto;
-}
-
 footer span{
     position: relative;
     margin-left: 1.2rem ;
@@ -237,7 +240,7 @@ footer span{
 }
 footer .svg{
     position: absolute;
-    top: -2rem;
+    bottom: 1rem;
     left: 0px;
     height: 3rem;
     width: 3rem;
@@ -246,9 +249,6 @@ footer .svg{
 footer .svg svg{
     height: 100%;
     width: 100%;
-}
-footer div{
-    padding-block: 1rem;
 }
 /* @media --------------------------------------------------*/
 @media only screen and (max-width: 800px) {
@@ -261,6 +261,21 @@ footer div{
     .header-flex a{
         font-weight: bold;
         font-size: 0.7rem;
+    }
+    .header-flex > ul a::before{
+        height: 0.7rem;
+    }
+    .header-flex > ul a::before{
+        left: 0.7rem;
+    }
+    footer{
+        font-size: 0.7rem;
+    }
+    .gmail-icon::before{
+        width: 0.7rem;
+    }
+    .github-icon::before{
+        width: 0.7rem;
     }
 }
 /* animation --------------------------------------------------*/
