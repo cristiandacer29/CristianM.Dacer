@@ -37,7 +37,7 @@ function toClose(){
     closeModal();
 }
 window.addEventListener('popstate', function(event) {
-    if (modal.style.display === 'block') {
+    if (modal.style.display === 'none') {
         closeModal(); // Close the modal when the back button is clicked
         console.log('Back button pressed, modal closed.');
     }
