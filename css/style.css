@@ -28,6 +28,7 @@ body{
     background-size: cover;
 
 }
+
 .grid{
     display: grid;
 }
@@ -79,6 +80,9 @@ a:hover{
     box-shadow: var(--shadow), var(--highlight);
     border: 0px;
 }
+.neumorphism-up-side{
+    box-shadow: var(--shadow), var(--highlight), var(--inset-highlight), var(--inset-shadow);
+}
 .box-background{
     backdrop-filter: blur(1px);
     border-radius: min(3dvw, 32px);
@@ -118,6 +122,7 @@ button{
 .show-animation{
     animation: show-animation 0.3s ease-in-out forwards;
 }
+
 /* Fonts ----------------------------------------------*/
 @font-face{
     font-family: karla-bold;
