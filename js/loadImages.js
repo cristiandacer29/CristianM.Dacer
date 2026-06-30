@@ -34,6 +34,7 @@ exercisesImages.addEventListener("click", imageClicked=>{
 
 function toClose(){
     modal.style.display = "none";
+    console.log('Modal closed via close button.');
     closeModal();
 }
 window.addEventListener('popstate', function(event) {
