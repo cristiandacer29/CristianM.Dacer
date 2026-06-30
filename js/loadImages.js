@@ -14,8 +14,6 @@ function openModal() {
 }
 function closeModal() {
     modal.style.display = 'none';
-    
-    // If the modal was closed manually, remove the state we pushed
     if (window.history.state && window.history.state.modalOpen) {
         window.history.back(); 
         console.log('Modal closed, history state popped.'); 
@@ -36,7 +34,7 @@ exercisesImages.addEventListener("click", imageClicked=>{
 
 function toClose(){
     modal.style.display = "none";
-    
+    closeModal();
 }
 window.addEventListener('popstate', function(event) {
     if (modal.style.display === 'block') {
