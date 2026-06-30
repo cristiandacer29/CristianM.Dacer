@@ -38,6 +38,5 @@ function toClose(){
 window.addEventListener('popstate', function(event) {
     if (modal.style.display === 'flex') {
         closeModal(); 
-        console.log('Back button clicked, modal closed.'); 
     }
 });
