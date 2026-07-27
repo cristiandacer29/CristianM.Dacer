@@ -15,7 +15,9 @@ if (project == "dishwashing") {
     folderName = "dishwashing/";
     imageList = ["Calamansi.png",
                 "Lemon.png",
-                "Mockup.png"]; 
+                "Mockup.png",
+                "Actual Design of Calamansi.jpg",
+                "Actual Design of Lemon.jpg"]; 
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else if(project == "jersey"){
@@ -48,6 +50,22 @@ else if(project == "logoDesign"){
                 "5 gallon water dispenser jug mockup.jpg",
                 "JME circular sticker.png",
                 "JME rectangular sticker.png"]; 
+    updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
+}
+else if(project == "tesda"){
+    folderName = "tesda/";
+    imageList = ["Class officers.jpg",
+                "First day orientation in CSS NCII.jpg",
+                "Class zoom Meeting.png",
+                "Computer assemble and power supply checking.jpg",
+                "Creating network cables.jpg",
+                "Institutional assessment assemble and disassemble of system unit.jpg",
+                "Institutional assessment creating bootable flash drive.jpg",
+                "Institutional assessment setup local area network connections.jpg",
+                "Peer to peer network connection activity.jpg",
+                "Setup wired network environment by group.jpg",
+                "National assessment group 2nd batch.jpeg",
+                "National assessment group with our assessors.jpeg"];
     updateDescription(path + folderName + imageList[0], imageList[0].split(/[.]/).at());
 }
 else{
