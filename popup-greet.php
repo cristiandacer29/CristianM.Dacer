@@ -1,7 +1,7 @@
 <?php 
 if (isset($_COOKIE['visitor_name987654321'])) {
     $visitorName = $_COOKIE['visitor_name987654321'];
-    echo "<script>window.location.href = 'index.html';</script>";
+    echo "<script>window.location.href = 'index.php';</script>";
     exit();
 }
 session_start();

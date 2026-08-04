@@ -59,12 +59,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    }
    else
    {
-      die("<script> window.location = 'index.html';</script>");
+      die("<script> window.location = 'index.php';</script>");
    }
 }
 else
 {
-   die("<script> window.location = 'index.html';</script>");
+   die("<script> window.location = 'index.php';</script>");
 }
 ?>
 <script src="portfolio.js"></script>

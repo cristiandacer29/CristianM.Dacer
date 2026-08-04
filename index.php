@@ -1,3 +1,9 @@
+<?php 
+if (!isset($_COOKIE['visitor_name987654321'])) {
+    echo "<script>window.location.href = 'popup-greet.php';</script>";
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
                         <img src="img/logo.ico" alt="logo">
                     </a>
                 </div>
-                <ul><a href="index.html" class="active">HOME</a></ul>
+                <ul><a href="index.php" class="active">HOME</a></ul>
                 <ul><a href="portfolio.html">PORTFOLIO</a></ul>
                 <ul><a href="contact.html">CONTACT</a></ul>
             </div>

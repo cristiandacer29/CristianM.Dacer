@@ -73,5 +73,5 @@ $visitors[] = [
 // Save updated data
 file_put_contents($jsonFile, json_encode($visitors));
 
-header('Location: index.html');
+header('Location: index.php');
 //----------------------------------------------------
