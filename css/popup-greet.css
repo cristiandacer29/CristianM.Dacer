@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fonts ----------------------------------------------*/
+@font-face{
+    font-family: karla-bold;
+    src: url(../font/Karla/static/Karla-Bold.ttf);
+}
+@font-face{
+    font-family: karla;
+    src: url(../font/Karla/static/Karla-Regular.ttf);
+}
+@font-face{
+    font-family: Montserrat;
+    src: url(../font/Montserrat/Montserrat-Regular.ttf);
+}
+
+body{
+    background-color: rgb(214, 214, 214);
+    min-height: 100dvh;
+    min-width: 100dvw;
+    display: grid;
+    place-items: center;
+}
+div{
+    z-index: 99;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5), -5px -5px 7px rgb(255, 255, 255, 0.5);
+}
+.margin{
+    margin: 1rem;
+}
+.padding{
+    padding: 1rem;
+}
+h1{
+    font-family: karla-bold;
+}
+p{
+    font-family: karla;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+form{
+    display: flex;
+    flex-wrap: wrap
+}
+input{
+    width: 100%;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    border: none;
+    outline-color:rgb(0, 105, 197);
+    outline-width: 1px;
+    background-color: rgb(201, 201, 201);
+    padding-inline: 1rem;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgb(255, 255, 255, 0.5);
+    font-family: karla;
+    text-transform: capitalize;
+
+}
+button{
+    position: relative;
+    margin-left: auto;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgb(255, 255, 255, 0.5);
+    background-color: rgb(235, 235, 235);
+    color: rgb(0, 105, 197);
+}
