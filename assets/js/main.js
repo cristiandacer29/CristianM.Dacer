@@ -5,16 +5,17 @@ import{portfolio} from'./components/portfolio.js';
 
 const cookieExists = document.cookie.split(';').some((cookie) => cookie.trim().startsWith('cristianDacerPortfolioVisitorName='));
 const currentPath = window.location.pathname;
+const isOnGreetingsPage = currentPath.includes("/pages/greetings/") || currentPath.endsWith("/pages/greetings");
 if (cookieExists) {
     // User has already submitted the form
-    if (currentPath.includes("/pages/greetings")) {
+    if (isOnGreetingsPage) {
         // window.location.replace(window.location.origin);
         window.location.replace(window.location.origin + "/CristianM.Dacer/");
     }
 }
 else {
     // User has not submitted the form yet
-    if (!currentPath.includes("/pages/greetings")) {
+    if (!isOnGreetingsPage) {
         // window.location.replace(window.location.origin + "/pages/greetings");
         window.location.replace(window.location.origin + "/CristianM.Dacer/pages/greetings");
     }
