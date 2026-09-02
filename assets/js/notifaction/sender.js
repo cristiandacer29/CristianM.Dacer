@@ -1,3 +1,7 @@
+const repoBase = currentPath.startsWith('/pages/') || currentPath === '/' || currentPath.endsWith('index.html') 
+    ? '' 
+    : '/' + currentPath.split('/')[1];
+
 const form = document.getElementById("form");
 const visitorName = document.getElementById("name");
 const visitorPurpose = document.getElementById("purpose");
@@ -124,7 +128,8 @@ form.addEventListener("submit", (event)=>{
             document.cookie = `cristianDacerPortfolioVisitorName=${encodeURIComponent(clearName)};max-age=${(30 * 60)}; path=/; Secure; SameSite=Lax`;
             submitButton.innerText = "Send";
             submitButton.disabled = false;
-            window.location.replace(window.location.origin);
+            // window.location.replace(window.location.origin);
+            window.location.replace(window.location.origin + repoBase + "/");
         })
         .catch(error => {
             console.error('Error:', error);

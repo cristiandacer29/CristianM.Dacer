@@ -5,16 +5,23 @@ import{portfolio} from'./components/portfolio.js';
 
 const cookieExists = document.cookie.split(';').some((cookie) => cookie.trim().startsWith('cristianDacerPortfolioVisitorName='));
 const currentPath = window.location.pathname;
+
+const repoBase = currentPath.startsWith('/pages/') || currentPath === '/' || currentPath.endsWith('index.html') 
+    ? '' 
+    : '/' + currentPath.split('/')[1];
+
 if (cookieExists) {
     // User has already submitted the form
     if (currentPath.includes("/pages/greetings")) {
-        window.location.replace(window.location.origin);
+        // window.location.replace(window.location.origin);
+        window.location.replace(window.location.origin + repoBase + "/");
     }
 }
 else {
     // User has not submitted the form yet
     if (!currentPath.includes("/pages/greetings")) {
-        window.location.replace(window.location.origin + "/pages/greetings");
+        // window.location.replace(window.location.origin + "/pages/greetings");
+        window.location.replace(window.location.origin + repoBase + "/pages/greetings");
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
