@@ -30,22 +30,22 @@ const sanitizeInput = (text)=>{
         .replace(/\//g, "&#x2F;"); 
 }
 //validate range of input character
-const validateLength = (inputValue, errorMessage, inputName)=>{
+const validateLength = (inputValue, errorContainer, inputName)=>{
     const inputLength = inputValue.length;
     const maxLength = (inputName === "Message")? 1000 : 50;
     if (inputLength === 0) {
-        errorMessage.textContent = inputName + " is required.";
+        errorContainer.textContent = inputName + " is required.";
         return false;
     }
     if (inputLength < 3) {
-        errorMessage.textContent = inputName + " must be at least 3 characters.";
+        errorContainer.textContent = inputName + " must be at least 3 characters.";
         return false;
     }
     if (inputLength > maxLength) {
-        errorMessage.textContent = inputName + " cannot exceed " + maxLength + " characters.";
+        errorContainer.textContent = inputName + " cannot exceed " + maxLength + " characters.";
         return false;
     }
-    errorMessage.textContent = "";
+    errorContainer.textContent = "";
     return true
 }
 const validateName = ()=>{
