@@ -9,7 +9,7 @@ if (cookieExists) {
     // User has already submitted the form
     if (currentPath.includes("/pages/greetings")) {
         // window.location.replace(window.location.origin);
-        window.location.replace("./");
+        window.location.replace(window.location.origin + "/CristianM.Dacer/");
     }
 }
 else {
