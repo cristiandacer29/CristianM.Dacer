@@ -16,7 +16,7 @@ else {
     // User has not submitted the form yet
     if (!currentPath.includes("/pages/greetings")) {
         // window.location.replace(window.location.origin + "/pages/greetings");
-        window.location.replace("./pages/greetings");
+        window.location.replace(window.location.origin + "/CristianM.Dacer/pages/greetings");
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
