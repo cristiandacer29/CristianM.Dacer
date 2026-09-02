@@ -8,7 +8,7 @@ const disableDownload = (tag) =>{
 const saveAndNavigate = (name, description, category) =>{
     console.log(name, description, category);
     localStorage.setItem("currentProject", JSON.stringify({name, description, category}));
-    window.location.href = "./../../../pages/image/gallery.html";
+    window.location.href = "../../../pages/image/gallery.html";
 }
 export const portfolio = ()=>{
     const hasDownloadedBefore = sessionStorage.getItem('downloaded');
