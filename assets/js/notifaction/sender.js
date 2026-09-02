@@ -129,7 +129,7 @@ form.addEventListener("submit", (event)=>{
             submitButton.innerText = "Send";
             submitButton.disabled = false;
             // window.location.replace(window.location.origin);
-            window.location.replace(window.location.origin + repoBase + "/");
+            window.location.replace("./");
         })
         .catch(error => {
             console.error('Error:', error);
