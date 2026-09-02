@@ -92,6 +92,11 @@ p{
 .margin-large {
     margin: var(--large-spacing);
 }
+@media screen and (max-width: 768px) {
+.margin-large {
+    margin: 0px;
+}
+}
 .margin-large-inline {
     margin-inline: var(--large-spacing);
 }
