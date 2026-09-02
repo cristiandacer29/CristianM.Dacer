@@ -1,0 +1,27 @@
+:root{
+    /* colors */
+    --main-color: #709bff;
+    --background-color: #252430;
+    --light-shadow: #97979717;
+    --dark-shadow: rgba(22, 22, 22, 0.861);
+    --font-color: rgb(230, 230, 230);
+    /* fonts */
+    --title-font-bold: 'karla-bold', sans-serif;
+    --title-font-regular: 'karla', sans-serif;
+    --paragraph-font: 'Montserrat', serif;
+    /* speeds transition */
+    --transition-fast: 0.25s;
+    --transition-medium: 5s;
+    --transition-slow: 1s;
+    /* spacing */
+    --small-spacing: 0.5rem;
+    --medium-spacing: 1rem;
+    --large-spacing: 1.5rem;
+    /* radius */
+    --border-radius-small: 1rem;
+    --border-radius-medium: 2rem;
+    --border-radius-large: 4rem;
+}
+/* *{
+    outline: solid red 1px;
+} */

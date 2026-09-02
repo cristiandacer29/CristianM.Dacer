@@ -1,0 +1,100 @@
+.link-hover:hover{
+    filter: brightness(2);
+    transform: scale(1.1);
+    transition: var(--transition-fast);
+}
+.link-hover:active{
+    transform: scale(0.9);
+    transition: var(--transition-fast);
+}
+
+.image-hover:hover{
+    transform: scale(1.05);
+    outline: 1px solid var(--main-color);
+    transition: var(--transition-fast);
+}
+.image-hover:active{
+    transform: scale(0.99);
+    transition: var(--transition-fast);
+}
+.popup-animation{
+    animation: popup 0.5s cubic-bezier(0.68,-0.2,0.27,1.55) 0s 1 normal forwards;
+}
+@keyframes popup {
+	0% {
+        opacity: 0;
+		transform: scale(0);
+	}
+
+	100% {
+        opacity: 1;
+		transform: scale(1);
+	}
+}
+.slide-from-right-animation{
+    animation: slide-from-right 0.5s cubic-bezier(0.68,-0.2,0.27,1.55) 0s 1 normal forwards;
+}
+@keyframes slide-from-right {
+	0% {
+        opacity: 0;
+		transform: translateX(100%);;
+	}
+
+	100% {
+        opacity: 1;
+		transform: translateX(0);;
+	}
+}
+.slide-from-left-animation{
+    animation: slide-from-left 0.5s cubic-bezier(0.68,-0.2,0.27,1.55) 0s 1 normal forwards;
+}
+@keyframes slide-from-left {
+	0% {
+        opacity: 0;
+		transform: translateX(100%);
+	}
+
+	100% {
+        opacity: 1;
+		transform: translateX(0);
+	}
+}
+.slide-from-bottom-animation{
+    animation: slide-from-bottom 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) 0s 1 normal forwards;
+}
+@keyframes slide-from-bottom {
+	0% {
+        opacity: 0;
+		transform: translateY(100%);
+	}
+
+	100% {
+        opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* for loading animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+.gradient-border-animation {
+    background-size: 100% 100%, 200% 100%;
+    animation: moveBorderGradient 4s infinite cubic-bezier(.17,.67,.83,.67);
+}
+@keyframes moveBorderGradient {
+    0% {
+        background-position: 0% 0%, 0% 0%;
+    }
+    50% {
+        background-position: 0% 0%, 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%, 0% 0%;
+    }
+}

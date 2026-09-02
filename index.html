@@ -1,88 +1,172 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="Title">Cristian M. Dacer</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="icon" type="image/x-icon" href="img/logo.ico">
-    <script type="module" src="js/htmlCommonParts/headerFooter.js"></script>
-</head>
-<body>
-    <div class="wrapper">
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Home</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+        <script src="/assets/js/main.js" defer type="module"></script>
+    </head>
+    <body>
         <header>
-            <div class="header-flex">
-                <div>
-                    <a href="index.html" class="logo">
-                        <img src="img/logo.ico" alt="logo">
+            <ul class="flex">
+                <li>
+                    <a href="./" >
+                        <img src="img/logo.ico" alt="logo" class="neumorphism-small padding-small radius-small image-hover" />
                     </a>
-                </div>
-                <ul><a href="index.html" class="active">HOME</a></ul>
-                <ul><a href="portfolio.html">PORTFOLIO</a></ul>
-                <ul><a href="contact.html">CONTACT</a></ul>
-            </div>
+                </li>
+                <li>
+                    <a href="./" class="flex icon link-hover active-nav">
+                        <span>
+                            <i class="icon-color fa fa-home fa-2x"></i>
+                        </span>
+                        <h2>Home</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="pages/portfolio" class="flex icon link-hover">
+                        <span>
+                            <i class="icon-color fa fa-briefcase fa-2x"></i>
+                        </span>
+                        <h2>Portfolio</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="./pages/contact/" class="flex icon link-hover">
+                        <span>
+                            <i class="icon-color fa fa-phone fa-2x"></i>
+                        </span>
+                        <h2>Contact</h2>
+                    </a>
+                </li>
+                <li class="hamburger-button relative" id="mobileNavContainer">
+                    <span>
+                        <button class="neumorphism radius-small flex image-hover">
+                            <i class="icon-color fa fa-bars fa-2x"></i>
+                        </button>
+                    </span>
+                    <div class="absolute background glass-card radius-small hide" id="mobileNav">
+                        <ul class="mobile-nav-button flex">
+                            <li>
+                                <a href="./" class="flex icon padding-large-inline link-hover active-nav">
+                                    <span>
+                                        <i class="icon-color fa fa-home fa-2x"></i>
+                                    </span>
+                                    <h2>Home</h2>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./pages/portfolio" class="flex icon padding-large-inline link-hover">
+                                    <span>
+                                        <i class="icon-color fa fa-briefcase fa-2x"></i>
+                                    </span>
+                                    <h2>Portfolio</h2>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./pages/contact/" class="flex icon padding-large-inline link-hover">
+                                    <span>
+                                        <i class="icon-color fa fa-phone fa-2x"></i>
+                                    </span>
+                                    <h2>Contact</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </header>
-        <div class="content to-animate" id="showScreen">
-            <div class="img-container left-to-center-animation">
-                <div class="rgb-animation neumorphism-raise">
-                    <img src="img/profile.jpg" alt=" My graduation photo">
+        <main class="flex">
+            <div class="flex hero-section margin-large">
+                <div class="neumorphism padding-small radius-large ">
+                    <img src="img/profile.jpg" alt="" class="gradient-border gradient-border-animation">
+                </div>
+                <div class="neumorphism-inset padding-large radius-large flex">
+                    <h1 class="padding-small">Hi I'm Cristian!</h1>
+                    <p class="padding-small"> Welcome to my portfolio! All the information on this website showcases my knowledge and presents some of my previous projects and sample digital art exercises.</p>
                 </div>
             </div>
-            <div class="context neumorphism box-background right-to-center-animation">
-                <h1>Hi I'm Cristian!</h1>
-                <h3 class="welcome-paragraph"> Welcome to my portfolio! All the information on this website showcases my knowledge and presents some of my previous projects and sample digital art exercises.</h3>
+            <div class="bio neumorphism padding-large radius-large flex margin-large">
+                <h2 class="padding-medium">Bio</h2>
+                    <p class="padding-small">A Bachelor of Science in Information Technology graduate from Central Bicol State University of Agriculture Sipocot Campus <a href="https://cbsua.edu.ph/" target="_blank" class="link-hover link">CBSUA</a> batch 2019.</p>
+                    <p class="padding-small">My first OJT in my school library. We helped the librarian to handle some of the basic work, such as book arranging, buying new newspapers in the public market, bagging, cleaning, computer maintenance, student book borrowing, and more. My final OJT was on our school's main campus, which is located in Pili, Camarines Sur. We assign in ICT (Information and Communication Technology). We were maintaining the connectivity of the whole campus, specifically changing UTP cables, replacing old RJ45s, installing routers, troubleshooting, and other IT-related work.</p>
+                    <p class="padding-small">I have almost 5 years of experience in a manufacturing company, working as a production controller that schedules, plans, and sets priorities for job orders. Manage daily operations, monitor production flow, and ensure continuous, smooth processes. Create operations quota to track the performance metrics and analyze data to provide monthly performance reports.</p>
             </div>
-        </div>
-        <div class="flex">
-            <div class="paragraph-width">
-                <h2 class="to-animate">Bio</h2>
-                    <p class="to-animate">A Bachelor of Science in Information Technology graduate from Central Bicol State University of Agriculture Sipocot Campus <a href="https://w3.cbsua.edu.ph/" target="_blank" class="link-hover link">CBSUA</a> batch 2019.</p>
-                    <p class="to-animate">My first OJT in my school library. We helped the librarian to handle some of the basic work, such as book arranging, buying new newspapers in the public market, bagging, cleaning, computer maintenance, student book borrowing, and more. My final OJT was on our school's main campus, which is located in Pili, Camarines Sur. We assign in ICT (Information and Communication Technology). We were maintaining the connectivity of the whole campus, specifically changing UTP cables, replacing old RJ45s, installing routers, troubleshooting, and other IT-related work.</p>
-                    <p class="to-animate">I have almost 5 years of experience in a manufacturing company, working as a production controller that schedules, plans, and sets priorities for job orders. Manage daily operations, monitor production flow, and ensure continuous, smooth processes. Create operations quota to track the performance metrics and analyze data to provide monthly performance reports.</p>
-                    <hr class="to-animate">
-            </div>
-            <div class="paragraph-width">
-                <h2 class="to-animate">Skills</h2>
-                    <table>
+            <div class="skills neumorphism-inset padding-large radius-large margin-large flex ">
+                <h2 class="padding-medium">Skills</h2>
+                    <table class="padding-small">
                         <td>
                             <ul>
-                                <li class="to-animate">Computer literacy</li>
-                                <li class="to-animate">Creativity</li>
-                                <li class="to-animate">Technical support</li>
-                                <li class="to-animate">Basic Database Management</li>
-                                <li class="to-animate">Programming</li>
+                                <li>Computer literacy</li>
+                                <li>Creativity</li>
+                                <li>Technical support</li>
+                                <li>Basic Database Management</li>
+                                <li>Programming</li>
                             </ul>
                         </td>
                         <td>
                             <ul>
-                                <li class="to-animate">Knowledge in Microsoft Office</li>
-                                <li class="to-animate">Knowledge in Adobe Photoshop and Illustrator</li>
-                                <li class="to-animate">Basic 3D  using Blender application</li>
-                                <li class="to-animate">Knowledge in web development</li>
+                                <li>Knowledge in Microsoft Office</li>
+                                <li>Knowledge in Adobe Photoshop and Illustrator</li>
+                                <li>Basic 3D  using Blender application</li>
+                                <li>Knowledge in web development</li>
                             </ul>
                         </td>
                     </table>
-                    <hr>
-                <h2>Education background</h2>
-                    <ul>
-                        <li>Tertiary education<br><b>&nbsp&nbsp Center Bicol State University Of Agriculture</b><br>&nbsp&nbsp Impig, Sipocot Camarines Sur - 2019</li>
-                        <li>Secondary education<br><b>&nbsp&nbsp St. Peter Baptist College Foundation</b><br>&nbsp&nbsp Poblacion Lupi Camarines Sur - 2015</li>
-                        <li>Primary education<br><b>&nbsp&nbsp Bulawan Sr. Elementary School</b><br>&nbsp&nbsp Bulawan Sr. Lupi Camarines Sur - 2010</li>
-                    </ul>
-                    <hr>
-                <h2 class="to-animate">My Hobby</h2>
-                    <div class="my-personal-image to-animate" onclick="window.location.href = 'myImageFullSize.html'">
-                        <img src="img/compressImage/front (2).png" class="neumorphism-raise box-background" alt="">
-                        <img src="img/compressImage/front (1).png" class="neumorphism-raise box-background" alt="">
-                        <img src="img/compressImage/front (3).png" class="neumorphism-raise box-background" alt="">
-                    </div>
             </div>
-            <custom-footer></custom-footer>
-    </div>
-</body>
-<script src="js/onShowAnimation.js"></script>
+            <div class="education neumorphism padding-large radius-large flex margin-large">
+                <h2 class="padding-medium">Education background</h2>
+                <ul>
+                    <li class="padding-medium">Tertiary education<br>
+                        <i>Center Bicol State University Of Agriculture</i><br>
+                        <p>Impig, Sipocot Camarines Sur - 2019</p></li>
+                    </li>
+                    <li class="padding-medium">Secondary education<br>
+                        <i>St. Peter Baptist College Foundation</i><br>
+                        <p>Poblacion Lupi Camarines Sur - 2015</p></li>
+                    </li>
+                    <li class="padding-medium">Primary education<br>
+                        <i>Bulawan Sr. Elementary School</i><br>
+                        <p>Bulawan Sr. Lupi Camarines Sur - 2010</p></li>
+                    </li>
+                </ul>
+            </div>
+            <div class="hobby padding-large radius-large margin-large neumorphism-inset flex">
+                <h2 class="padding-small">My hobby</h2>
+                <div class="hobby-image flex">
+                    <div class="neumorphism radius-medium">
+                        <img src="./img/compressImage/front (1).png" alt="">
+                    </div>
+                    <div class="neumorphism radius-medium">
+                        <img src="./img/compressImage/front (2).png" alt="">
+                    </div>
+                    <div class="neumorphism radius-medium">
+                        <img src="./img/compressImage/front (3).png" alt="">
+                    </div>
+                </div>
+                <a href="./pages/image/gallery.html" rel="noopener noreferrer">
+                    <button class="radius-medium neumorphism-button image-hover padding-large-inline padding-small-block">
+                        <span>
+                            <i class="fa fa-eye"></i>
+                        </span>
+                        See all images...
+                    </button>
+                </a>
+            </div>
+        </main>
+        <footer class="flex">
+            <span class="flex icon">
+                <span>
+                    <i class="fa fa-github"></i>
+                </span>
+                    <p>GitHub : <a href="https://github.com/cristiandacer29" target="_blank" class="link-hover">cristiandacer29</a></p>
+            </span>
+            <span class="flex icon">
+                <span>
+                    <i class="fa fa-envelope"></i>
+                </span>
+                    <p>Gmail : <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank" class="link-hover">cristiandacer29@gmail.com</a></a></p>
+            </span>
+        </footer>
+    </body>
 </html>
-

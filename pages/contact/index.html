@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+        <script src="../../assets/js/main.js" defer type="module"></script>
+        <script src="../../assets/js/sendEmail/email.js" defer type="module"></script>
+    </head>
+    <body>
+        <header>
+            <ul class="flex">
+                <li>
+                    <a href="../../" >
+                        <img src="../../img/logo.ico" alt="logo" class="neumorphism-small padding-small radius-small image-hover" />
+                    </a>
+                </li>
+                <li>
+                    <a href="../../" class="flex icon link-hover">
+                        <span>
+                            <i class="icon-color fa fa-home fa-2x"></i>
+                        </span>
+                        <h2>Home</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="../portfolio/" class="flex icon link-hover ">
+                        <span>
+                            <i class="icon-color fa fa-briefcase fa-2x"></i>
+                        </span>
+                        <h2>Portfolio</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="./" class="flex icon link-hover active-nav">
+                        <span>
+                            <i class="icon-color fa fa-phone fa-2x"></i>
+                        </span>
+                        <h2>Contact</h2>
+                    </a>
+                </li>
+                <li class="hamburger-button relative" id="mobileNavContainer">
+                    <span>
+                        <button class="neumorphism radius-small flex image-hover">
+                            <i class="icon-color fa fa-bars fa-2x"></i>
+                        </button>
+                    </span>
+                    <div class="absolute background glass-card radius-small hide" id="mobileNav">
+                        <ul class="mobile-nav-button flex">
+                            <li>
+                                <a href="../../" class="flex icon padding-large-inline link-hover">
+                                    <span>
+                                        <i class="icon-color fa fa-home fa-2x"></i>
+                                    </span>
+                                    <h2>Home</h2>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../portfolio/" class="flex icon padding-large-inline link-hover">
+                                    <span>
+                                        <i class="icon-color fa fa-briefcase fa-2x"></i>
+                                    </span>
+                                    <h2>Portfolio</h2>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./" class="flex icon padding-large-inline link-hover active-nav">
+                                    <span>
+                                        <i class="icon-color fa fa-phone fa-2x"></i>
+                                    </span>
+                                    <h2>Contact</h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <main class="contact-container">
+            <div class="contact neumorphism radius-large grid  gradient-border gradient-border-animation">
+                <aside class="neumorphism-inset padding-medium flex">
+                    <span class="neumorphism-small padding-small">
+                        <i class="icon-color fa fa-phone"></i>
+                    </span>
+                    <div class="phone-number">
+                        <p><b>TNT </b> (+63) 948 862 7159</p>
+                        <p><b>GLOBE </b> (+63) 966 208 2520</p>
+                    </div>
+                </aside>
+                <aside class="neumorphism-inset padding-medium flex">
+                    <span class="neumorphism-small padding-small">
+                        <i class="icon-color fa fa-envelope"></i>
+                    </span>
+                    <div class="email">
+                    <p><b>Gmail : </b><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank" class="link-hover">cristiandacer29@gmail.com</a></p>
+                    </div>
+                </aside>
+                <aside class="neumorphism-inset padding-medium flex">
+                    <span class="neumorphism-small padding-small">
+                        <i class="icon-color fa fa-map-marker"></i>
+                    </span>
+                    <div class="address">
+                        <p>Bulawan Sr., Lupi, Camarines Sur</p>
+                    </div>
+                </aside>
+                <section class="neumorphism-inset-small padding-medium">
+                    <form id="emailForm" class="flex neumorphism radius-small padding-medium ">
+                        <div class="gate">
+                            <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <label>
+                            <span>Name: </span>
+                            <span class="error-message error" id="errorName"> </span>
+                            <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required maxlength="30" minlength="3" title="Enter your name" autocomplete="off" class="radius-small padding-small neumorphism-inset-small">
+                        </label>
+                        <label>
+                            <span>Gmail: </span>
+                            <span class="error-message error" id="errorEmail"> </span>
+                            <input type="email" id="email" name="email" placeholder="JuanDelaCruz@gmail.com" required maxlength="50" required title="Enter your email" class="radius-small padding-small neumorphism-inset-small">
+                        </label>
+                        <label>
+                            <span>Message:</span>
+                            <span class="error-message error" id="errorMessage"> </span>
+                            <textarea id="message" name="message" placeholder="Type your message..." required maxlength="1020" title="Enter your message" autocomplete="off" class="radius-small padding-small neumorphism-inset-small"></textarea>
+                        </label>
+                        <button type="submit" id="submitBtn"  class="radius-small neumorphism-button image-hover">Send</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer class="flex">
+            <span class="flex icon">
+                <span>
+                    <i class="fa fa-github"></i>
+                </span>
+                    <p>GitHub : <a href="https://github.com/cristiandacer29" target="_blank" class="link-hover">cristiandacer29</a></p>
+            </span>
+            <span class="flex icon">
+                <span>
+                    <i class="fa fa-envelope"></i>
+                </span>
+                    <p>Gmail : <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank" class="link-hover">cristiandacer29@gmail.com</a></p>
+            </span>
+        </footer>
+    </body>
+    <!-- modal -->
+    <dialog id="dialogModal" class="modal-full-size glass-card modal-notification" >
+        <div class="modal-container radius-small flex padding-medium-block">
+            <div class="modal-header padding-medium-inline flex">
+                <button class="link-hover">
+                    <i class="fa fa-close "></i>
+                </button>
+            </div>
+            <div class="modal-body padding-medium-inline">
+                <h3 class="success">Header gfgd fghbfd hfhngh ghjgfh jghfj</h3>
+                <p>fsdkfk kdfnkjds nsfjkndklfnldfkll dfgds dfghsfghghnd fghdhjdghdj fgh</p>
+            </div>
+            <div class="modal-footer padding-medium-inline flex">
+                <button class="link-hover padding-small">
+                    <i class="fa fa-close info">
+                        <span>Ok</span>
+                    </i>
+                </button>
+                <button class="link-hover padding-small">
+                    <i class="fa fa-close error"> 
+                        <span>Cancel</span>
+                    </i>
+                </button>
+            </div>
+        </div>
+    </dialog>
+</html>

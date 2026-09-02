@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Gallery</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="../../img/logo.ico">
+        <script src="/assets/js/main.js" defer type="module"></script>
+    </head>
+    <body>
+        <div class="category padding-large-inline padding-small-block" id="categoryText">
+            <h2>No Data</h2>
+            <p>No Data</p>
+        </div>
+        <div class="image-gallery padding-large grid" id="gallery">
+            <!-- <div class="image-card flex neumorphism padding-medium radius-small">
+                <div class="img-container radius-small neumorphism-small padding-small">
+                    <img src="../../img/jersey/Cycling glove.png" alt="">
+                </div>
+                <p>dfdsfsd gfdg dfg dfg fgh ghjghj hjkm hikijk uibnbvnvghnghjnhgjnhjghjiktu ikjftuyu Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, officia molestiae unde, quibusdam saepe quod at veritatis odit beatae necessitatibus, atque reiciendis repudiandae! Necessitatibus, deserunt quisquam! Nam dicta suscipit laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam asperiores esse explicabo sed libero rerum ratione recusandae unde maxime voluptatibus! Blanditiis soluta porro libero quod quos maiores reprehenderit laudantium modi?</p>
+                <button class="neumorphism-small radius-small image-hover">View..</button> -->
+        </div>
+        <div class="modal-full-size glass-card hide" id="fullSizeContainer">
+            <div class="modal-content" >
+                <div class="absolute full-size-image-container">
+                    <img src="" alt="" id="imageToView">
+                </div>
+                
+                <div class="overlay-container relative">
+                    <button class="absolute link-hover close-button radius-small" id="close">
+                        <span>
+                            <i class="fa fa-close lg"></i>
+                        </span>
+                    </button>
+
+                    <button class="absolute link-hover radius-small button-previews" id="previews">
+                        <span>
+                            <i class="fa fa-chevron-left lg"></i>
+                        </span>
+                    </button>
+                    <button class="absolute link-hover radius-small button-next" id="next">
+                        <span>
+                            <i class="fa fa-chevron-right lg"></i>
+                        </span>
+                    </button>
+                    <p class="padding-small absolute full-size-image-description" id="fullSizeImageDescription"> </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

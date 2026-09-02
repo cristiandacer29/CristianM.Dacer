@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "category": "project",
+        "name": "jersey",
+        "folder": "../../img/jersey/",
+        "images":
+        [
+            "Cycling glove.png",
+            "Cycling shirt back view.png",
+            "Cycling shirt front view.png",
+            "Cycling shorts back view.png",
+            "Cycling shorts front view.png",
+            "Cycling socks.png",
+            "Cycling team banner.png",
+            "Tailor render.png",
+            "Cycling final team banner.webp",
+            "Actual  cycling jersey front view.webp",
+            "Actual  cycling jersey back view.webp"
+        ]
+    },
+    {
+        "id": 2,
+        "category": "project",
+        "name": "dishwashing",
+        "folder": "../../img/dishwashing/",
+        "images":
+        [
+            "Actual Design of Calamansi.jpg",
+            "Actual Design of Lemon.jpg",
+            "Calamansi.png",
+            "Lemon.png",
+            "Mockup.png"
+        ]
+    },
+    {
+        "id": 3,
+        "category": "project",
+        "name": "waterStation",
+        "folder": "../../img/waterStationLogo/",
+        "images":
+        [
+            "2.5 gallon water jug mockup.jpg",
+            "5 gallon water dispenser jug mockup.jpg",
+            "5 gallon water jug mockup.jpg",
+            "Business card mockup.png",
+            "Business card.png",
+            "Business schedule banner.jpg",
+            "JME banner.png",
+            "JME circular sticker.png",
+            "JME establishment banner.jpg",
+            "JME logo 3D version.png",
+            "JME logo horizontal style.png",
+            "JME logo vertical style.png",
+            "JME logo.png",
+            "JME rectangular sticker.png"
+        ]
+    },
+    {
+        "id": 4,
+        "category": "project",
+        "name": "wedding",
+        "folder": "../../img/wedding/",
+        "images":
+        [
+            "Invitation cover.jpg",
+            "souvenir.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "category": "project",
+        "name": "tesda",
+        "folder": "../../img/tesda/",
+        "images":
+        [
+            "Class officers.jpg",
+            "Class zoom Meeting.png",
+            "Computer assemble and power supply checking.jpg",
+            "Creating network cables.jpg",
+            "First day orientation in CSS NCII.jpg",
+            "Institutional assessment assemble and disassemble of system unit.jpg",
+            "Institutional assessment creating bootable flash drive.jpg",
+            "Institutional assessment setup local area network connections.jpg",
+            "National assessment group 2nd batch.jpeg",
+            "National assessment group with our assessors.jpeg",
+            "Peer to peer network connection activity.jpg",
+            "Setup wired network environment by group.jpg",
+            "TESDA_OFFICIAL_LOGO.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "category": "exercise",
+        "name": "3d",
+        "folder": "../../img/3d/",
+        "images":
+        [
+            "rubiks.png"
+        ]
+    },
+    {
+        "id": 7,
+        "category": "exercise",
+        "name": "illustrator sample",
+        "folder": "../../img/illustrator-sample/",
+        "images":
+        [
+            "armor-helmet.png",
+            "carton-art.png",
+            "mecha.png",
+            "s.png"
+        ]
+    },
+    {
+        "id": 8,
+        "category": "exercise",
+        "name": "PhotoShop",
+        "folder": "../../img/PhotoShop/",
+        "images":
+        [
+            "bouble exposure.jpg",
+            "color correct.jpg",
+            "enhance.jpg",
+            "layer-1.png",
+            "layer-2.png",
+            "layer-3.png",
+            "layer-4.png",
+            "layer-5.png",
+            "layer-6.png",
+            "layer-7.png",
+            "photoshop-sample.png"
+        ]
+    },
+    {
+        "id": 9,
+        "category": "exercise",
+        "name": "vexel",
+        "folder": "../../img/vexel/",
+        "images":
+        [
+            "vexel-art.png"
+        ]
+    },
+    {
+        "id": 10,
+        "category": "hobby",
+        "name": "biking",
+        "folder": "../../img/myImages/",
+        "images":
+        [
+            "bikers sticker.webp",
+            "cavite.webp",
+            "manila (1).webp",
+            "manila (2).webp",
+            "rizal (1).webp",
+            "rizal (2).webp",
+            "tagaytay (1).webp",
+            "tagaytay (2).webp",
+            "tagaytay (3).webp",
+            "tagaytay (4).webp"
+        ]
+    }
+]

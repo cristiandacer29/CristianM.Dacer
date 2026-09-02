@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Greetings</title>
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+        <script src="../../assets/js/main.js" defer type="module"></script>
+        <script src="../../assets/js/notifaction/sender.js" defer type="module"></script>
+    </head>
+    <body>
+        <div class="flex greetings-container">
+            <div class="greetings flex">
+                <aside class="flex padding-medium ">
+                    <img src="./../../img/logo.ico" class="neumorphism-small radius-small padding-medium" alt="Logo">
+                </aside>
+                <section class="padding-medium ">
+                    <h2>Greetings! Let's Connect?</h2>
+                    <form class="flex" id="form">
+                        <label>
+                            <p>What is your name? <span class="error" id="errorName"></span></p>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required maxLength="30" minlength="3" autocomplete="off"/>
+                        </label>
+                        <label>
+                            <p>What is your purpose? <span class="error" id="errorPurpose"></span></p>
+                            <select name="purpose" id="purpose" required>
+                                <option value="" disabled selected hidden>Select your purpose</option>
+                                <option value="General inquiry">General inquiry</option>
+                                <option value="I want to work together">I want to work together</option>
+                                <option value="Just reviewing your work">Just reviewing your work</option>
+                                <option value="Freelance or contract project">Freelance or contract project</option>
+                                <option value="I'm just exploring">I'm just exploring</option>
+                            </select>
+                            
+                        </label>
+                        <button type="submit" id="submit" class="neumorphism-button image-hover">Submit</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
