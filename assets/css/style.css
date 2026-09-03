@@ -72,7 +72,20 @@
         margin-left: 1.5rem;
         padding: 0.25rem;
     }
-
+}
+.small-screen{
+        display: none;
+        visibility: hidden;
+    }
+@media screen and (max-width: 768px) {
+    .small-screen{
+        display: block;
+        visibility: visible;
+    }
+    .wide-screen{
+        display: none;
+        visibility: hidden;
+    }
 }
 .education{
     flex-direction: column;
@@ -98,13 +111,13 @@
     gap: 0.5rem;
     .hobby-image{
         margin-inline: auto;
-        gap: 5rem;
+        gap: 2rem;
         align-items: center;
-        
+        justify-content: center;
+        width: clamp(300px, 80%, 700px);
         div{
-            width: 15rem;
             overflow: hidden;
-            border: 0.5rem solid var(--background-color);
+            border: 1rem solid transparent;
             img{
                 width: 100%;
                 height: 100%;
@@ -120,6 +133,22 @@
         div:last-child{
             height: 20rem;
         }
+        @media screen and (max-width: 768px) {
+            div:first-child{
+                height: 10rem;
+            }
+            div:nth-child(2){
+                height: 15rem;
+            }
+            div:last-child{
+                height: 10rem;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .hobby-image{
+                gap: 1rem;
+            }
+        }
     }
     a{
         width: clamp(200px, 30%, 350px);
@@ -130,27 +159,7 @@
         }
     }
 }
-@media screen and (min-width: 1000px) {
-    .hobby  > .hobby-image  > img{
-        max-width: calc((100% / 3) - 12rem);
-    }
-}
-@media screen and (max-width: 850px) {
-    .hobby .hobby-image{
-        gap: 2rem;
-        img{
-            max-width: calc((100% / 3) - 2rem);
-        }
-    }
-}
-@media screen and (max-width: 768px) {
-    .hobby .hobby-image{
-        gap: 1rem;
-        img{
-            max-width: calc((100% / 3) - 2rem);
-        }
-    }
-}
+
 /* portfolio page */
 .project-container{
     gap: 2rem;
@@ -233,6 +242,15 @@
             margin-bottom: 0.5rem;
             font-family: var(--title-font-bold);
         }
+        @media screen and (max-width: 400px) {
+            a{
+                width: 100%;
+            }
+            button{
+                width: 100%;
+                padding: 0.2rem 0.5rem;
+            }
+        }
     }
 }
 
@@ -248,7 +266,8 @@
             row-gap: 1rem;
             padding-block: 1rem;
             p{
-                height: 4rem;
+                height: 8rem;
+                line-height: 1.2rem;
             }
         }
         .project-image{

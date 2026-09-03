@@ -138,7 +138,7 @@ form.addEventListener('submit', (event)=>{
             body: JSON.stringify(formData)
         })
         .then(() => {
-            submitButton.innerText = "Send";
+            submitButton.innerText = "Sent!";
             submitButton.disabled = false;
             localStorage.setItem('formLastSubmitted', Date.now());
             alert('Message sent successfully!');

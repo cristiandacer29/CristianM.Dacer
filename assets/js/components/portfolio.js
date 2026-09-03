@@ -5,10 +5,12 @@ const disableDownload = (tag) =>{
     tag.style.cursor = 'not-allowed';
     tag.textContent ="Already downloaded";
 }
+const currentPath = window.location.pathname;
+const urlIsLocal = currentPath.includes("/CristianM.Dacer/") ? "/CristianM.Dacer/" : "/";
 const saveAndNavigate = (name, description, category) =>{
     console.log(name, description, category);
     localStorage.setItem("currentProject", JSON.stringify({name, description, category}));
-    window.location.href = window.location.origin + "/CristianM.Dacer/pages/image/gallery.html";
+    window.location.href = window.location.origin + urlIsLocal + "pages/image/gallery.html";
 }
 export const portfolio = ()=>{
     const hasDownloadedBefore = sessionStorage.getItem('downloaded');

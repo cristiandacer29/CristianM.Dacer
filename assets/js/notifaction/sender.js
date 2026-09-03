@@ -96,7 +96,7 @@ visitorPurpose.addEventListener("change",validateVisitorPurpose);
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
     if (submitButton) {
-        submitButton.innerText = "Sending...";
+        submitButton.innerText = "Connecting...";
         submitButton.disabled = true;
     }
     const isNameValid = validateVisitorName();
@@ -118,11 +118,10 @@ form.addEventListener("submit", (event)=>{
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
-        })
+        })  
         .then(() => {
-            alert('Message sent successfully!');
             document.cookie = `cristianDacerPortfolioVisitorName=${encodeURIComponent(clearName)};max-age=${(30 * 60)}; path=/; Secure; SameSite=Lax`;
-            submitButton.innerText = "Send";
+            submitButton.innerText = "Connected!";
             submitButton.disabled = false;
             window.location.replace("./");
         })

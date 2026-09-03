@@ -76,6 +76,7 @@ header{
         top: calc(100% + 0.5rem);
         right: 0;
         border-top-right-radius: 0px;
+        z-index: 99;
     }
     .mobile-nav-button {
         gap:0px;
@@ -103,6 +104,7 @@ main{
 @media screen and (max-width: 768px) {
     main{
         gap: 2rem;
+        margin-block: 1rem;
     }
 }
 hr{
