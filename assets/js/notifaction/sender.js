@@ -2,6 +2,7 @@ const form = document.getElementById("form");
 const visitorName = document.getElementById("name");
 const visitorPurpose = document.getElementById("purpose");
 const submitButton = document.getElementById("submit");
+const submitButtonText = document.getElementById("submitText");
 
 const errorName = document.getElementById("errorName");
 const errorPurpose = document.getElementById("errorPurpose");
@@ -96,7 +97,7 @@ visitorPurpose.addEventListener("change",validateVisitorPurpose);
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
     if (submitButton) {
-        submitButton.innerText = "Connecting...";
+        submitButtonText.innerText = " Connecting...";
         submitButton.disabled = true;
     }
     const isNameValid = validateVisitorName();
@@ -121,7 +122,7 @@ form.addEventListener("submit", (event)=>{
         })  
         .then(() => {
             document.cookie = `cristianDacerPortfolioVisitorName=${encodeURIComponent(clearName)};max-age=${(30 * 60)}; path=/; Secure; SameSite=Lax`;
-            submitButton.innerText = "Connected!";
+            submitButtonText.innerText = " Connected!";
             submitButton.disabled = false;
             window.location.replace("./");
         })

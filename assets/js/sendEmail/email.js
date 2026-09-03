@@ -1,6 +1,7 @@
 
 const form = document.getElementById('emailForm');
 const submitButton =  document.getElementById('submitBtn');
+const submitButtonText = document.getElementById('submitText');
 
 const inputName = document.getElementById('name');
 const inputEmail = document.getElementById('email');
@@ -106,7 +107,7 @@ form.addEventListener('submit', (event)=>{
     if(isNameValid && isEmailValid && isMessageValid){
         //disabled button while sending
         if (submitButton) {
-            submitButton.innerText = "Sending...";
+            submitButtonText.innerText = " Sending...";
             submitButton.disabled = true;
         }
         //send message every 5mins only
@@ -116,7 +117,7 @@ form.addEventListener('submit', (event)=>{
         if (lastSubmission && now - lastSubmission < coolDownMS) {
             const minutesLeft = Math.ceil((coolDownMS - (now - lastSubmission)) / 60000);
             alert(`Please wait ${minutesLeft} minute(s) before sending another message.`);
-            submitButton.innerText = "Send";
+            submitButtonText.innerText = " Send";
             submitButton.disabled = false;
             document.getElementById('emailForm').reset();
             return;
@@ -138,7 +139,7 @@ form.addEventListener('submit', (event)=>{
             body: JSON.stringify(formData)
         })
         .then(() => {
-            submitButton.innerText = "Sent!";
+            submitButtonText.innerText = " Send";
             submitButton.disabled = false;
             localStorage.setItem('formLastSubmitted', Date.now());
             alert('Message sent successfully!');
