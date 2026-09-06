@@ -22,6 +22,11 @@
         width: clamp(200px, 300px, 400px);
         aspect-ratio: 1 / 1;
     }
+    @media screen and (max-width: 768px) {
+        div:first-child{
+            width: 200px;
+        }
+    }
     div:last-child{
         flex: 1;
         flex-direction: column;
@@ -31,12 +36,12 @@
             text-align: justify;
         }
         @media screen and (min-width: 800px) {
-        h1{
-            font-size: 2.5rem;
-        }
-        p{
-            font-size: 1.5rem;
-        }
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
         }
     }
 }
@@ -66,11 +71,40 @@
     flex-direction: column;
     justify-content: center;
     li{
-        list-style: circle;
+        list-style: none;
         color: var(--font-color);
         font-family: var(--paragraph-font);
         margin-left: 1.5rem;
         padding: 0.25rem;
+    }
+    .glow-box-container{
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: 0;
+        padding: 1rem;
+        gap: 1.5rem;
+        .glow-box{
+            flex-direction: column;
+            border: 1px solid var(--main-color);
+            min-width: clamp(5rem, 15rem, 25rem);
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 0 1em color-mix(in srgb, var(--main-color) 50%, transparent);
+            background: linear-gradient(135deg, color-mix(in srgb, var(--background-color) 95%, white 5%), var(--background-color));
+            span{
+                margin: auto;
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            p{
+                margin: auto;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+        }
     }
 }
 .small-screen{
@@ -114,8 +148,8 @@
         gap: 2rem;
         align-items: center;
         justify-content: center;
-        width: clamp(300px, 80%, 700px);
         div{
+            aspect-ratio: 9 / 16;
             overflow: hidden;
             border: 1rem solid transparent;
             img{
@@ -134,7 +168,10 @@
             height: 20rem;
         }
         @media screen and (max-width: 768px) {
-            div:first-child{
+            div{
+                border: 0.5rem solid transparent;;
+            }
+        div:first-child{
                 height: 10rem;
             }
             div:nth-child(2){
@@ -144,10 +181,23 @@
                 height: 10rem;
             }
         }
-        @media screen and (max-width: 768px) {
-            .hobby-image{
-                gap: 1rem;
+        @media screen and (max-width: 400px) {
+        div:first-child{
+                height: 7rem;
             }
+            div:nth-child(2){
+                height: 10rem;
+            }
+            div:last-child{
+                height: 7rem;
+            }
+        }
+
+    }
+    @media screen and (max-width: 768px) {
+        .hobby-image{
+            gap: 1rem;
+            width: 100%;
         }
     }
     a{
@@ -155,6 +205,11 @@
         margin-left: auto;
         margin-right: 0.5rem;
         button{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        a{
             width: 100%;
         }
     }
@@ -422,14 +477,6 @@
     section{
         width: 70%;
         border-left:2px solid var(--main-color) ;
-        h2{
-            font-family: var(--title-font-bold);
-            margin: 0;
-            background: linear-gradient(45deg, #e8e8e8, var(--main-color));
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
         form{
             gap: 1rem;
             flex-direction: column;
