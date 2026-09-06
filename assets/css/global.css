@@ -185,14 +185,7 @@ button:hover{
         -webkit-backdrop-filter: blur(5.1px);
         border: 1px solid rgba(255, 255, 255, 0.21);
 }
-.modal-full-size{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    overflow: hidden;
-}
+
 .modal-content{
     margin-inline: auto;
     width: clamp(300px, 100%, 2000px);
@@ -306,8 +299,27 @@ form{
     display: none !important;
     visibility: hidden !important;
 }
+.modal-full-size{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+.modal-notification::backdrop {
+    background: rgba(255, 255, 255, 0.075);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+    border: 1px solid rgba(255, 255, 255, 0.21); 
+}
 .modal-notification{
-    padding-top: 3rem;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: auto;
+    overflow: visible;
     z-index: 99;
     color: var(--font-color);
     & button{
@@ -324,8 +336,9 @@ form{
         margin: auto;
         background: #000000;
         background: linear-gradient(135deg,rgba(0, 0, 0, 0.2) 10%, rgba(121, 121, 121, 0.2) 30%, rgba(0, 0, 0, 0.2) 65%);
-        width: clamp(250px, calc(100dvw - 60dvw), 450px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: clamp(250px, calc(100dvw - 50dvw), 450px);
+        border: 1px solid;
+        /* border-color: ; */
         gap: 1rem;
         .modal-header{
             justify-content: space-between;

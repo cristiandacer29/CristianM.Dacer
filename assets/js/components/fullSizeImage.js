@@ -1,5 +1,5 @@
 import { loadedImages } from './gallery.js'; 
-export const modals = ()=>{
+export const fullScreenImageViewer = ()=>{
     let currentIndex = 0;
     const fullSizeContainer = document.getElementById('fullSizeContainer');
     const imageToView = document.getElementById('imageToView');

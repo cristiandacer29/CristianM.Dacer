@@ -1,29 +1,32 @@
 import{navbar} from'./components/navbar.js';
 import{gallery} from'./components/gallery.js';
-import{modals} from'./components/modals.js';
+import{fullScreenImageViewer} from'./components/fullSizeImage.js';
 import{portfolio} from'./components/portfolio.js';
 
+import ModalController from'./components/templates/modalController.js';
+const AppModal = new ModalController();
+window.AppModal = AppModal;
 const cookieExists = document.cookie.split(';').some((cookie) => cookie.trim().startsWith('cristianDacerPortfolioVisitorName='));
 const currentPath = window.location.pathname;
 const isOnGreetingsPage = currentPath.includes("/pages/greetings/");
 const urlIsLocal = currentPath.includes("/CristianM.Dacer/") ? "/CristianM.Dacer/" : "/";
-if (cookieExists) {
-    // User has already submitted the form
-    if (isOnGreetingsPage) {
-        // window.location.replace(window.location.origin);
-        window.location.replace(window.location.origin + urlIsLocal);
-    }
-}
-else {
-    // User has not submitted the form yet
-    if (!isOnGreetingsPage) {
-        window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
-    }
-}
+// if (cookieExists) {
+//     // User has already submitted the form
+//     if (isOnGreetingsPage) {
+//         // window.location.replace(window.location.origin);
+//         window.location.replace(window.location.origin + urlIsLocal);
+//     }
+// }
+// else {
+//     // User has not submitted the form yet
+//     if (!isOnGreetingsPage) {
+//         window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
+//     }
+// }
 document.addEventListener("DOMContentLoaded", () => {
     navbar();
     gallery();
-    modals();
+    fullScreenImageViewer();
     portfolio();
     if (document.querySelector('.hero-section')) {
         localStorage.removeItem('currentProject');
@@ -34,4 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }));    
     }
 
-})
+})      
