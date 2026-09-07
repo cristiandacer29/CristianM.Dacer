@@ -78,9 +78,9 @@
             </ul>
         </header>
         <main class="contact-container">
-        <button id="launchDemoBtn" class="neumorphism-button">Modal</button>
+        <!-- <button id="launchDemoBtn" class="neumorphism-button">Modal</button> -->
             <div class="contact neumorphism radius-large grid  gradient-border gradient-border-animation">
-                <aside class="neumorphism-inset padding-medium flex">
+                <aside class="neumorphism-inset padding-medium radius-large flex">
                     <span class="neumorphism-small padding-small">
                         <i class="icon-color fa fa-phone"></i>
                     </span>
@@ -89,7 +89,7 @@
                         <p><b>GLOBE </b> (+63) 966 208 2520</p>
                     </div>
                 </aside>
-                <aside class="neumorphism-inset padding-medium flex">
+                <aside class="neumorphism-inset padding-medium radius-large flex">
                     <span class="neumorphism-small padding-small">
                         <i class="icon-color fa fa-envelope"></i>
                     </span>
@@ -97,35 +97,35 @@
                     <p><b>Gmail : </b><a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank" class="link-hover">cristiandacer29@gmail.com</a></p>
                     </div>
                 </aside>
-                <aside class="neumorphism-inset padding-medium flex">
+                <aside class="neumorphism-inset padding-medium radius-large flex">
                     <span class="neumorphism-small padding-small">
-                        <i class="icon-color fa fa-map-marker"></i>
+                        <i class="icon-large fa fa-map-marker"></i>
                     </span>
                     <div class="address">
                         <p>Bulawan Sr., Lupi, Camarines Sur</p>
                     </div>
                 </aside>
-                <section class="neumorphism-inset-small padding-medium">
-                    <form id="emailForm" class="flex neumorphism radius-small padding-medium ">
+                <section class="neumorphism-inset-small radius-large padding-medium">
+                    <form id="emailForm" class="flex neumorphism radius-medium padding-medium ">
                         <div class="gate">
                             <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
                         </div>
                         <label>
                             <span>Name: </span>
-                            <span class="error-message error" id="errorName"> </span>
+                            <span class="text-caption error-text" id="errorName"></span>
                             <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required maxlength="30" minlength="3" title="Enter your name" autocomplete="off" class="radius-small padding-small neumorphism-inset-small">
                         </label>
                         <label>
                             <span>Gmail: </span>
-                            <span class="error-message error" id="errorEmail"> </span>
+                            <span class="text-caption error-text" id="errorEmail"> </span>
                             <input type="email" id="email" name="email" placeholder="JuanDelaCruz@gmail.com" required maxlength="50" required title="Enter your email" class="radius-small padding-small neumorphism-inset-small">
                         </label>
                         <label>
                             <span>Message:</span>
-                            <span class="error-message error" id="errorMessage"> </span>
+                            <span class="text-caption error-text" id="errorMessage"> </span>
                             <textarea id="message" name="message" placeholder="Type your message..." required maxlength="1020" title="Enter your message" autocomplete="off" class="radius-small padding-small neumorphism-inset-small"></textarea>
                         </label>
-                        <button type="submit" id="submitBtn"  class="radius-small neumorphism-button image-hover"><i class="fa fa-paper-plane-o"></i> <span id="submitText">Send</span></button>
+                        <button type="submit" id="submitBtn"  class="radius-full neumorphism-button image-hover"><i class="fa icon fa-paper-plane-o"></i> <span id="submitText">Send</span></button>
                     </form>
                 </section>
             </div>

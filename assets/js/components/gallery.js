@@ -45,12 +45,15 @@ export const gallery = ()=>{
     if(gallery){
         const cardFormat = (jsonData, imageName)=>{
             const card = document.createElement('div');
-            card.className = "image-card flex neumorphism padding-medium radius-small popup-animation";
-            card.innerHTML = `  <div class="img-container radius-small neumorphism-small padding-small">
+            card.className = "image-card flex neumorphism padding-small radius-large popup-animation";
+            card.innerHTML = `  <div class="img-container radius-medium neumorphism-small padding-small">
                                     <img class="imageTag" src="" alt="">
                                 </div>
                                 <p class="imageDescription"></p>
-                                <button class="neumorphism-button radius-medium image-hover">View Image...</button>`;
+                                <button class="neumorphism-button center gap-small radius-full image-hover">
+                                    <i class="fa icon center  fa-expand"></i>
+                                    View
+                                </button>`;
             
             card.querySelector('.imageTag').src = jsonData.folder+imageName;
             card.querySelector('.imageTag').dataset.image = jsonData.folder+imageName;

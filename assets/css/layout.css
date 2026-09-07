@@ -34,7 +34,6 @@ header{
             
             flex: 1;
             a{
-                display: inline-flex;
                 img{
                     height: 100%;
                     aspect-ratio: 1 / 1;
@@ -57,6 +56,14 @@ header{
     header > ul > li:not(:first-child, :last-child){
         visibility: hidden;
         display: none;
+    }
+}
+.active-nav{
+    i{
+        color: rgb(219, 219, 219);
+    }
+    h2{
+        color: rgb(219, 219, 219);
     }
 }
 .hamburger-button{
@@ -86,6 +93,10 @@ header{
     }
     .mobile-nav-button > li{
         width: 100%;
+        a{
+            margin-left: var(--large-spacing);
+            justify-content: flex-start;
+        }
     }
 }
 @media screen and (min-width: 768px) {
@@ -95,16 +106,14 @@ header{
     }
 }
 main{
+    padding-inline:  var(--extra-large-spacing) ;
     flex-direction: column;
-    gap: 5rem;
-    margin-block: 4rem;
     min-height: max(400px, calc(100dvh - 8.4375rem));
     height: 100%;
 }
 @media screen and (max-width: 768px) {
     main{
-        gap: 2rem;
-        margin-block: 1rem;
+        padding-inline: 0;
     }
 }
 hr{
@@ -140,7 +149,6 @@ footer{
 .image-gallery{
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-auto-rows: minmax(350px, auto);
-    gap: 5rem;
     .image-card{
         flex-direction: column;
         align-items: center;
@@ -174,7 +182,6 @@ footer{
     .image-gallery{
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         grid-auto-rows: minmax(200px, auto);
-        gap: 2rem;
         .image-card{
             .img-container{
                 width: 100%;
