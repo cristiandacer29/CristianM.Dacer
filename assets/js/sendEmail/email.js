@@ -151,14 +151,3 @@ form.addEventListener('submit', (event)=>{
         });
     }
 })
-
-const launchBtn = document.getElementById('launchDemoBtn');
-
-launchBtn.addEventListener('click', () => {
-    // Call the global controller instance setup directly
-    window.AppModal.open({
-        title: "Launch External Portfolio App?",
-        body: "This will open your search algorithm project in a separate web window tab.",
-        alertColor: "orange" // Pass your custom purple/blue layout border theme color
-    });
-});

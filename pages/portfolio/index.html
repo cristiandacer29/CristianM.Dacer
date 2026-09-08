@@ -8,74 +8,7 @@
         <script src="../../assets/js/main.js" defer type="module"></script>
     </head>
     <body>
-        <header>
-            <ul class="flex">
-                <li>
-                    <a href="../../" >
-                        <img src="../../img/logo.ico" alt="logo" class="neumorphism-small padding-small radius-small image-hover" />
-                    </a>
-                </li>
-                <li>
-                    <a href="../../" class="flex icon link-hover">
-                        <span>
-                            <i class="icon-color fa fa-home fa-2x"></i>
-                        </span>
-                        <h2>Home</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="./" class="flex icon link-hover active-nav">
-                        <span>
-                            <i class="icon-color fa fa-briefcase fa-2x"></i>
-                        </span>
-                        <h2>Portfolio</h2>
-                    </a>
-                </li>
-                <li>
-                    <a href="../contact/" class="flex icon link-hover">
-                        <span>
-                            <i class="icon-color fa fa-phone fa-2x"></i>
-                        </span>
-                        <h2>Contact</h2>
-                    </a>
-                </li>
-                <li class="hamburger-button relative" id="mobileNavContainer">
-                    <span>
-                        <button class="neumorphism radius-small flex image-hover">
-                            <i class="icon-color fa fa-bars fa-2x"></i>
-                        </button>
-                    </span>
-                    <div class="absolute background glass-card radius-small hide" id="mobileNav">
-                        <ul class="mobile-nav-button flex">
-                            <li>
-                                <a href="../../" class="flex icon padding-large-inline link-hover">
-                                    <span>
-                                        <i class="icon-color fa fa-home fa-2x"></i>
-                                    </span>
-                                    <h2>Home</h2>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./" class="flex icon padding-large-inline link-hover active-nav">
-                                    <span>
-                                        <i class="icon-color fa fa-briefcase fa-2x"></i>
-                                    </span>
-                                    <h2>Portfolio</h2>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../contact/" class="flex icon padding-large-inline link-hover">
-                                    <span>
-                                        <i class="icon-color fa fa-phone fa-2x"></i>
-                                    </span>
-                                    <h2>Contact</h2>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </header>
+        <x-header page="portfolio"></x-header>
         <main class="flex gap-extra-large margin-large-block" id="portfolioContainer">
             <div class="project-container flex">            
                 <h1 class="text-neumorphism">Previews Project</h1>
@@ -240,34 +173,21 @@
                 </div>
             </div>
             <div class="flex button-group">          
-                <button class="radius-full neumorphism-button image-hover view-to-gallery center gap-small" data-category="exercise">
+                <button class="radius-full neumorphism-button image-hover view-to-gallery center gap-small center" data-category="exercise">
                     <span>
-                        <i class="fa icon fa-external-link"></i>
+                        <i class="fa icon center fa-external-link"></i>
                     </span>
                     <h1>Photo edits...</h1>
                 </button>
-                <a href="./../../resume/Cristian-M-Dacer-Resume.pdf" data-down="download" download="Cristian_M_Dacer_Resume.pdf" class="radius-full neumorphism-button image-hover center gap-small">
+                <a href="./../../resume/Cristian-M-Dacer-Resume.pdf" data-down="download" download="Cristian_M_Dacer_Resume.pdf" class="radius-full neumorphism-button image-hover center gap-small center">
                         <span>
-                            <i class="icon fa fa-download"></i>
+                            <i class="icon center fa fa-download"></i>
                         </span>
                         <h1>Resume</h1>
                 </a>
                 
             </div>
         </main>
-        <footer class="flex">
-            <span class="flex icon">
-                <span>
-                    <i class="fa fa-github"></i>
-                </span>
-                    <p>GitHub : <a href="https://github.com/cristiandacer29" target="_blank" class="link-hover">cristiandacer29</a></p>
-            </span>
-            <span class="flex icon">
-                <span>
-                    <i class="fa fa-envelope"></i>
-                </span>
-                    <p>Gmail : <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=cristiandacer29@gmail.com&tf=1" target="_blank" class="link-hover">cristiandacer29@gmail.com</a></a></p>
-            </span>
-        </footer>
+        <x-footer></x-footer>
     </body>
 </html>

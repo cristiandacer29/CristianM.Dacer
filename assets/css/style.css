@@ -486,7 +486,6 @@
     width: clamp(300px, 80%, 700px);
     aside{
         width: 30%;
-        
         img{
             margin: auto;
             width: 100%;
@@ -515,7 +514,6 @@
                     color: var(--font-color);
                     font-family: var(--paragraph-font);
                     font-size: small;
-                    
                 }
                 select:invalid{
                     color: color-mix(in srgb, var(--font-color) 25%, transparent);
@@ -528,11 +526,8 @@
                 }
             }
             button{
-                width: 50%;
                 margin-left: auto;
-                border-radius: 999px;
                 color: var(--background-color);
-                padding-block: 0.2em;
             }
         }
     }
