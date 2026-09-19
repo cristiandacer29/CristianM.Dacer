@@ -12,20 +12,20 @@ const currentPath = window.location.pathname;
 const isOnGreetingsPage = currentPath.includes("/pages/greetings/");
 const urlIsLocal = currentPath.includes("/CristianM.Dacer/") ? "/CristianM.Dacer/" : "/";
 
-if (cookieExists) {
-    // User has already submitted the greetings form
-    if (isOnGreetingsPage) {
-        window.location.replace(window.location.origin + urlIsLocal);
-    }
-}
-else {
-    // User has not submitted the greetings form yet
-    if (!isOnGreetingsPage) {
-        window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
-    }
-}
+// if (cookieExists) {
+//     // User has already submitted the greetings form
+//     if (isOnGreetingsPage) {
+//         window.location.replace(window.location.origin + urlIsLocal);
+//     }
+// }
+// else {
+//     // User has not submitted the greetings form yet
+//     if (!isOnGreetingsPage) {
+//         window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
+//     }
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", ()=>{
     //to load other js file
     navbar();
     gallery();
@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
             name:'Biking, Bonds, and Balance',
             category: 'hobby',
             description:'One of my hobbies is biking. When I formerly worked in Manila as a production controller, almost every weekend we gathered to go for a ride. The cycling group I was a member of is called "Team Machinist," which consisted of my co-workers. We rode across Manila and nearby provinces. Through this hobby, I created more friends, improved my strength, and found a great stress reliever.'
-        }));    
+        }));
+        document.title= "Home";
     }
     // for home page
 })      

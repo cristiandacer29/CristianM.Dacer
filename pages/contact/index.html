@@ -11,7 +11,7 @@
     <body>
         <x-header page="contact"></x-header>
         <main class="contact-container relative">
-            <div class="contact neumorphism radius-large grid  gradient-border gradient-border-animation">
+            <section class="contact neumorphism radius-large grid  gradient-border gradient-border-animation">
                 <aside class="neumorphism-inset padding-medium radius-large flex">
                     <span class="neumorphism-small padding-small">
                         <i class="icon-color fa fa-phone"></i>
@@ -44,23 +44,23 @@
                         </div>
                         <label>
                             <span>Name: </span>
-                            <span class="text-caption error-text" id="errorName"></span>
                             <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required maxlength="30" minlength="3" title="Enter your name" autocomplete="off" class="radius-small padding-small neumorphism-inset-small">
+                            <small class="error-text" id="errorName"></small>
                         </label>
                         <label>
                             <span>Gmail: </span>
-                            <span class="text-caption error-text" id="errorEmail"> </span>
                             <input type="email" id="email" name="email" placeholder="JuanDelaCruz@gmail.com" required maxlength="50" required title="Enter your email" class="radius-small padding-small neumorphism-inset-small">
+                            <small class="error-text" id="errorEmail"> </small>
                         </label>
                         <label>
                             <span>Message:</span>
-                            <span class="text-caption error-text" id="errorMessage"> </span>
                             <textarea id="message" name="message" placeholder="Type your message..." required maxlength="1020" title="Enter your message" autocomplete="off" class="radius-small padding-small neumorphism-inset-small"></textarea>
+                            <small class="error-text" id="errorMessage"> </small>
                         </label>
                         <button type="submit" id="submitBtn"  class="radius-full neumorphism-button image-hover"><i class="fa icon fa-paper-plane-o"></i> <span id="submitText">Send</span></button>
                     </form>
                 </section>
-            </div>
+            </section>
         </main>
         <x-footer></x-footer>
     </body>

@@ -47,7 +47,7 @@ export const gallery = ()=>{
             const card = document.createElement('div');
             card.className = "image-card flex neumorphism padding-small radius-large popup-animation";
             card.innerHTML = `  <div class="img-container radius-medium neumorphism-small padding-small">
-                                    <img class="imageTag" src="" alt="">
+                                    <img class="imageTag" loading="lazy" src="" alt="">
                                 </div>
                                 <p class="imageDescription"></p>
                                 <button class="neumorphism-button center gap-small radius-full image-hover">

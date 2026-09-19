@@ -79,7 +79,6 @@ p, a, li, i{
     color: var(--font-color);
     font-family: var(--paragraph-font);
 }
-.text-caption{ font-size: var(--font-small); }
 .text-gradient{
     font-family: var(--title-font-bold);
     margin: 0;
@@ -93,6 +92,9 @@ p, a, li, i{
     2px 2px 3px var(--dark-shadow),   /* Flat dark shadow */
     -2px -2px 3px color-mix(in srgb, var(--light-shadow) 95%, white 5%);
 
+}
+label{
+    font-family: var(--paragraph-font);
 }
 /* spacing */
 .margin-extra-small {margin: var(--extra-small-spacing);}

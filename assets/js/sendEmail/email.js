@@ -14,7 +14,7 @@ const errorMessage = document.getElementById('errorMessage');
 let timeDelay;
 
 //email pattern
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 //validation=====================================================
 
@@ -63,7 +63,7 @@ const validateEmail = ()=>{
         errorEmail.textContent = "Email address is required.";
         return false;
     }
-    if (!EMAIL_REGEX.test(cleanEmail)) {
+    if (!emailRegex.test(cleanEmail)) {
         errorEmail.textContent = "Please enter a valid email format.";
         return false
     }
