@@ -40,7 +40,7 @@ form.addEventListener('submit', async (e) => {
             form.reset();
         })
         .finally(function() {
-            submitText.innerHTML = defaultHTML;
+            submitText.innerHTML = "Send";
             submitButton.disabled = false; 
         });
 });
