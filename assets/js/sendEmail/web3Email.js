@@ -1,5 +1,6 @@
 const form = document.getElementById('emailForm');
 const submitBtn = document.getElementById('submitBtn');
+const submitText = document.getElementById('submitText');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -7,7 +8,7 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-    submitBtn.innerHTML = "Please wait...";
+    submitText.innerHTML = "Please wait...";
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -22,12 +23,12 @@ form.addEventListener('submit', async (e) => {
             if (response.status == 200) {
                 //result.innerHTML = json.message;
                 alert(json.message);
-                submitBtn.innerHTML = defaultHTML;
+                submitText.innerHTML = defaultHTML;
             } else {
                 console.log(response);
                 //result.innerHTML = json.message;
                 alert(json.message);
-                submitBtn.innerHTML = defaultHTML;
+                submitText.innerHTML = defaultHTML;
             }
         })
         .catch(error => {
