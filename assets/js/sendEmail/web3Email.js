@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+const submitBtn = document.getElementById('submitBtn');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
         alert("Please fill out captcha field")
         return
     }
-    
+
     const formData = new FormData(form);
     formData.append("access_key", "9c57cfa1-ffe8-4ca3-ba75-c75af7c727a8");
 
