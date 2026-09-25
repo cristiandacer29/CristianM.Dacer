@@ -5,6 +5,14 @@ const submitText = document.getElementById('submitText');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    }
+    
     submitText.textContent = "Please wait...";
     submitBtn.disabled = true;
     const formData = new FormData(form);
