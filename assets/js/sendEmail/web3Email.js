@@ -23,12 +23,12 @@ form.addEventListener('submit', async (e) => {
             if (response.status == 200) {
                 //result.innerHTML = json.message;
                 alert(json.message);
-                submitText.innerHTML = defaultHTML;
+               // submitText.innerHTML = defaultHTML;
             } else {
                 console.log(response);
                 //result.innerHTML = json.message;
                 alert(json.message);
-                submitText.innerHTML = defaultHTML;
+                //submitText.innerHTML = defaultHTML;
             }
         })
         .catch(error => {
