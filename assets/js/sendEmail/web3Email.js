@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-    submitText.innerHTML = "Please wait...";
+    submitText.textContent = "Please wait...";
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -36,7 +36,7 @@ form.addEventListener('submit', async (e) => {
             alert("Something went wrong!");
         })
         .then(function() {
-            submitText.innerHTML = defaultHTML;
+            submitText.textContent = defaultHTML;
             form.reset();
         });
 });
