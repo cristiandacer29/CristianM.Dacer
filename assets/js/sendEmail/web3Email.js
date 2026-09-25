@@ -9,6 +9,7 @@ form.addEventListener('submit', async (e) => {
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
     submitText.textContent = "Please wait...";
+    submitBtn.disabled = true;
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -36,7 +37,10 @@ form.addEventListener('submit', async (e) => {
             alert("Something went wrong!");
         })
         .then(function() {
-            submitText.textContent = defaultHTML;
             form.reset();
+        })
+        .finally(function() {
+            submitText.innerHTML = defaultHTML;
+            submitButton.disabled = false; 
         });
 });
