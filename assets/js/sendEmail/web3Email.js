@@ -41,6 +41,6 @@ form.addEventListener('submit', async (e) => {
         })
         .finally(function() {
             submitText.innerHTML = "Send";
-            submitButton.disabled = false; 
+            submitBtn.disabled = false; 
         });
 });
