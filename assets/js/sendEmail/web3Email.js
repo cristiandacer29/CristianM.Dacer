@@ -36,6 +36,7 @@ form.addEventListener('submit', async (e) => {
             alert("Something went wrong!");
         })
         .then(function() {
+            submitText.innerHTML = defaultHTML;
             form.reset();
         });
 });
