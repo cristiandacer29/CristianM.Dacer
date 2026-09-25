@@ -98,12 +98,18 @@ inputMessage.addEventListener("input", ()=>{
 
 //send email=============================================
 form.addEventListener('submit', async (event)=>{
-    event.preventDefault();   
+    event.preventDefault();  
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+    if (!hCaptcha) {
+        e.preventDefault();
+        alert("Please fill out captcha field")
+        return
+    } 
     
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
     const isMessageValid = validateMessage();
-    console.log('good', isNameValid, isEmailValid, isMessageValid);
     if(isNameValid && isEmailValid && isMessageValid){
         //disabled button while sending
         if (submitButton) {
@@ -126,29 +132,35 @@ form.addEventListener('submit', async (event)=>{
             name: sanitizeInput(inputName.value),
             email: sanitizeInput(inputEmail.value),
             message: sanitizeInput(inputMessage.value),
-            honeypot: document.getElementById('honeypot').value 
         };
-        //The Web App URL you copied from Google Apps Script
-        //const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbzXq4UEIbEWKmfHuXrip-29TT1nA2tuYm-wq2oD0VfwJLsYwpffvzjDRh7MrUoTmL9a6Q/exec'; 
-        // fetch(googleScriptUrl, {
-        //     method: 'POST',
-        //     mode: 'no-cors', // Essential for handling cross-origin requests to Google Scripts
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(formData)
-        // })
-        // .then(() => {
-        //     submitButtonText.innerText = " Send";
-        //     submitButton.disabled = false;
-        //     localStorage.setItem('formLastSubmitted', Date.now());
-        //     alert('Message sent successfully!');
-        //     document.getElementById('emailForm').reset();
-        // })
-        // .catch(error => {
-        //     console.error('Error:', error);
-        //     alert('Something went wrong.');
-        // });
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                alert(json.message);
+            } else {
+                console.log(response);
+                alert(json.message);
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alert("Something went wrong!");
+        })
+        .then(function() {
+            form.reset();
+        })
+        .finally(function() {
+            submitText.innerHTML = "Send";
+            submitBtn.disabled = false; 
+        });
 
         
     }

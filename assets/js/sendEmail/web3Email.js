@@ -4,7 +4,7 @@ const submitText = document.getElementById('submitText');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
     if (!hCaptcha) {
@@ -17,6 +17,10 @@ form.addEventListener('submit', async (e) => {
     submitBtn.disabled = true;
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
+    if (object.website && object.website.trim() !== "") {
+        console.warn("Spam bot detected!");
+        return;
+    }
     const json = JSON.stringify(object);
 
     fetch('https://api.web3forms.com/submit', {
