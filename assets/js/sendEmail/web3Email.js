@@ -4,12 +4,12 @@ const submitText = document.getElementById('submitText');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
-
+    
+    submitText.textContent = "Please wait...";
+    submitBtn.disabled = true;
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-    submitText.textContent = "Please wait...";
-    submitBtn.disabled = true;
 
     fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -22,14 +22,10 @@ form.addEventListener('submit', async (e) => {
         .then(async (response) => {
             let json = await response.json();
             if (response.status == 200) {
-                //result.innerHTML = json.message;
                 alert(json.message);
-               // submitText.innerHTML = defaultHTML;
             } else {
                 console.log(response);
-                //result.innerHTML = json.message;
                 alert(json.message);
-                //submitText.innerHTML = defaultHTML;
             }
         })
         .catch(error => {
