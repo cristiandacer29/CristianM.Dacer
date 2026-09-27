@@ -16,12 +16,16 @@
                 </aside>
                 <section class="padding-medium ">
                     <h2 class="text-gradient">Greetings! Let's Connect!</h2>
-                    <form class="flex" id="form">
+                    <form class="flex" id="form" method="post">
+                        <input type="hidden" name="access_key" value="a24f88ad-3adb-4e83-9b79-14802c8c4fad">
                         <label>
                             <p>What is your name?</p>
                             <input type="text" name="name" id="name" placeholder="Enter your name" required maxLength="30" minlength="3" autocomplete="off"/>
                             <small class="error-text" id="errorName"></small>
                         </label>
+                        <div class="gate">
+                            <input type="text" id="honeypot" name="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <label>
                             <p>What is your purpose? <span class="text-caption error-text" id="errorPurpose"></span></p>
                             <select name="purpose" id="purpose" required>
@@ -32,10 +36,11 @@
                                 <option value="Freelance or contract project">Freelance or contract project</option>
                                 <option value="I'm just exploring">I'm just exploring</option>
                             </select>
-                            
                         </label>
+                        <div class="h-captcha" data-captcha="true"></div>
                         <button type="submit" id="submit" class="neumorphism-button image-hover padding-extra-small-block padding-medium-inline radius-full"><i class="icon fa fa-handshake-o"></i><span id="submitText">Connect</span></button>
                     </form>
+                    <script src="https://web3forms.com/client/script.js" async defer></script>
                 </section>
             </div>
         </div>

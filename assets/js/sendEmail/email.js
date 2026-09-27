@@ -99,14 +99,13 @@ inputMessage.addEventListener("input", ()=>{
 //send email=============================================
 form.addEventListener('submit', async (event)=>{
     event.preventDefault();  
-    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
 
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')?.value;
     if (!hCaptcha) {
-        e.preventDefault();
         alert("Please fill out captcha field")
         return
-    } 
-    
+    }
+
     const isNameValid = validateName();
     const isEmailValid = validateEmail();
     const isMessageValid = validateMessage();
@@ -120,48 +119,56 @@ form.addEventListener('submit', async (event)=>{
         const coolDownMS = 5 * 60 * 1000;
         const lastSubmission = localStorage.getItem('formLastSubmitted');
         const now = Date.now();
+
         if (lastSubmission && now - lastSubmission < coolDownMS) {
             const minutesLeft = Math.ceil((coolDownMS - (now - lastSubmission)) / 60000);
             alert(`Please wait ${minutesLeft} minute(s) before sending another message.`);
+            if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
+            // Re-enable button
             submitButtonText.innerText = " Send";
             submitButton.disabled = false;
             document.getElementById('emailForm').reset();
             return;
         }
-        const formData = {
-            name: sanitizeInput(inputName.value),
-            email: sanitizeInput(inputEmail.value),
-            message: sanitizeInput(inputMessage.value),
-        };
-        fetch('https://api.web3forms.com/submit', {
+        // get all data in the form
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        if (object.website && object.website.trim() !== "") {
+            form.reset();
+            return;
+        }
+        delete object.website;
+        object.name = sanitizeInput(inputName.value);
+        object.email = sanitizeInput(inputEmail.value);
+        object.message = sanitizeInput(inputMessage.value);
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(formData)
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                alert(json.message);
-            } else {
-                console.log(response);
-                alert(json.message);
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            alert("Something went wrong!");
-        })
-        .then(function() {
-            form.reset();
-        })
-        .finally(function() {
-            submitText.innerHTML = "Send";
-            submitBtn.disabled = false; 
+            body: JSON.stringify(object)
         });
-
-        
+        const resultJson = await response.json();
+        if (response.ok) { // Safe approach checking for 200-299 status
+            alert(resultJson.message || "Message sent successfully!");
+            // Save successful submission timestamp
+            localStorage.setItem('formLastSubmitted', Date.now().toString());
+        } else {
+            console.error("Server Error Response:", response);
+            alert(resultJson.message || "Failed to submit form.");
+        }
+        } catch (error) {
+            console.error("Network Error:", error);
+            alert("Something went wrong with the network!");
+        } finally {
+            if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
+            form.reset();
+            if (submitButton) {
+                submitButtonText.innerText = " Send";
+                submitButton.disabled = false;
+            }
+        }        
     }
 })

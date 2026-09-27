@@ -94,42 +94,64 @@ visitorName.addEventListener("input",()=>{
 });
 visitorPurpose.addEventListener("change",validateVisitorPurpose);
 //submit good entry
-form.addEventListener("submit", (event)=>{
+form.addEventListener("submit", async (event)=>{
     event.preventDefault();
+
+    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]')?.value;
+    if (!hCaptcha) {
+        alert("Please fill out captcha field")
+        return
+    }
     if (submitButton) {
         submitButtonText.innerText = " Connecting...";
         submitButton.disabled = true;
     }
     const isNameValid = validateVisitorName();
     const isPurposeValid = validateVisitorPurpose();
-    console.log(isNameValid, isPurposeValid);
     if (isNameValid && isPurposeValid) {
         const clearName = sanitizeInput(visitorName.value);
         const clearPurpose = sanitizeInput(visitorPurpose.value);
-        const formData = {
-            name: clearName,
-            message: `Visitor Logged | Purpose: ${clearPurpose}`
-        };
-         //The Web App URL you copied from Google Apps Script
-        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbzXq4UEIbEWKmfHuXrip-29TT1nA2tuYm-wq2oD0VfwJLsYwpffvzjDRh7MrUoTmL9a6Q/exec'; 
-        fetch(googleScriptUrl, {
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        if (object.website && object.website.trim() !== "") {
+            form.reset();
+            return;
+        }
+        delete object.website;
+        object.name = clearName;
+        object.purpose = clearPurpose;
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            mode: 'no-cors', // Essential for handling cross-origin requests to Google Scripts
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
             },
-            body: JSON.stringify(formData)
-        })  
-        .then(() => {
+            body: JSON.stringify(object)
+        });
+        const resultJson = await response.json();
+        if (response.ok) { // Safe approach checking for 200-299 status
             document.cookie = `cristianDacerPortfolioVisitorName=${encodeURIComponent(clearName)};max-age=${(30 * 60)}; path=/; Secure; SameSite=Lax`;
             submitButtonText.innerText = " Connected!";
             submitButton.disabled = false;
+            if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
             window.location.replace("./");
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Something went wrong.');
-        });
+            return
+        } else {
+            console.error("Server Error Response:", response);
+            alert(resultJson.message || "Failed to submit form.");
+            if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
+            submitButtonText.innerText = " Connect";
+            submitButton.disabled = false;  
+        }
+        } catch (error) {
+            console.error("Network Error:", error);
+            alert("Something went wrong with the network!");
+            if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
+            submitButtonText.innerText = " Connect!";
+            submitButton.disabled = false;  
+        }
     }
     
 })

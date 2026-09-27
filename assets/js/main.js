@@ -12,18 +12,18 @@ const currentPath = window.location.pathname;
 const isOnGreetingsPage = currentPath.includes("/pages/greetings/");
 const urlIsLocal = currentPath.includes("/CristianM.Dacer/") ? "/CristianM.Dacer/" : "/";
 
-// if (cookieExists) {
-//     // User has already submitted the greetings form
-//     if (isOnGreetingsPage) {
-//         window.location.replace(window.location.origin + urlIsLocal);
-//     }
-// }
-// else {
-//     // User has not submitted the greetings form yet
-//     if (!isOnGreetingsPage) {
-//         window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
-//     }
-// }
+if (cookieExists) {
+    // User has already submitted the greetings form
+    if (isOnGreetingsPage) {
+        window.location.replace(window.location.origin + urlIsLocal);
+    }
+}
+else {
+    // User has not submitted the greetings form yet
+    if (!isOnGreetingsPage) {
+        window.location.replace(window.location.origin + urlIsLocal + "pages/greetings/");
+    }
+}
 
 document.addEventListener("DOMContentLoaded", ()=>{
     //to load other js file
